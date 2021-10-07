@@ -289,4 +289,147 @@
         <genre>Punk Rock</genre>
         <art></art>
     </song>
+    <song>
+		<title>The Ballad of Mona Lisa</title>
+		<artist>Panic! At The Disco</artist>
+		<album>VICE AND VIRTUES</album>
+		<year>2011</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+	<song>
+		<title>I Write Sins Not Tragedies </title>
+		<artist>Panic! At The Disco</artist>
+		<album>FEVER YOU CAN’T SWEAT OUT</album>
+		<year>2005</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>intermission</title>
+		<artist>Panic! At The Disco</artist>
+		<album>FEVER YOU CAN’T SWEAT OUT</album>
+		<year>2005</year>
+		<genre>Techno</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>let's kill tonight</title>
+		<artist>Panic! At The Disco</artist>
+		<album>VICE AND VIRTUES</album>
+		<year>2011</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>High Hopes</title>
+		<artist>Panic! At The Disco</artist>
+		<album>PRAY FOR THE WICKED</album>
+		<year>2018</year>
+		<genre>alternative/indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>Hey Look Ma, I Made It</title>
+		<artist>Panic! At The Disco</artist>
+		<album>PRAY FOR THE WICKED</album>
+		<year>2018</year>
+		<genre>alternative/indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>Do I Wanna Know?</title>
+		<artist>Arctic Monkeys</artist>
+		<album>AM</album>
+		<year>2013</year>
+		<genre>alternative/indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>R U Mine?</title>
+		<artist>Arctic Monkeys</artist>
+		<album>AM</album>
+		<year>2013</year>
+		<genre>Garage rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>american sports</title>
+		<artist>arctic monkeys</artist>
+		<album>Tranquility Base Hotel & Casino</album>
+		<year>2018</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title> star treatment</title>
+		<artist>Arctic Monkeys</artist>
+		<album>Tranquility Base Hotel & Casino</album>
+		<year>2018</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>brianstorm</title>
+		<artist>Arctic Monkeys</artist>
+		<album>Favourite Worst Nightmare</album>
+		<year>2007</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>teddy picker</title>
+		<artist>Arctic Monkeys</artist>
+		<album>Favourite Worst Nightmare</album>
+		<year>2007</year>
+		<genre>Alternative/Indie</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>bennie and the jets</title>
+		<artist>Elton John</artist>
+		<album>Goodbye Yellow Brick Road</album>
+		<year>1973</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>Goodbye Yellow Brick Road</title>
+		<artist>Elton John</artist>
+		<album>Goodbye Yellow Brick Road</album>
+		<year>1973</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>crazy water</title>
+		<artist>Elton John</artist>
+		<album>Blue Moves</album>
+		<year>1976</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>tonight</title>
+		<artist>Elton John</artist>
+		<album>Blue Moves</album>
+		<year>1976</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
+    <song>
+		<title>tiny dancer</title>
+		<artist>Elton John</artist>
+		<album>Madman Across the Water</album>
+		<year>1971</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song><song>
+		<title>goodbye</title>
+		<artist>Elton John</artist>
+		<album>Madman Across the Water</album>
+		<year>1971</year>
+		<genre>Rock</genre>
+		<art></art>
+    </song>
 </song_list>
