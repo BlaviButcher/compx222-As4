@@ -42,16 +42,7 @@ if (file_exists('xml/song_list.xml')) {
         }
 
         ?>
-        <div class='grid-item'>
-            <div class='img-wrap'>
-                <img src='images/dookie.png' alt=''>
-            </div>
-            <div class='info-wrap'>
-                <div class='field-1'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
-                <div class='field-2'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
-                <div class='field-3'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
-            </div>
-        </div>
+
 
     </div>
 
