@@ -292,50 +292,50 @@
     <song>
 		<title>The Ballad of Mona Lisa</title>
 		<artist>Panic! At The Disco</artist>
-		<album>VICE AND VIRTUES</album>
+		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Panic!_at_the_Disco_-_Vices_&#38;_Virtues"</art>
+		<art>"images/vices_&#38;_virtues"</art>
     </song>
 	<song>
 		<title>I Write Sins Not Tragedies </title>
 		<artist>Panic! At The Disco</artist>
-		<album>FEVER YOU CAN’T SWEAT OUT</album>
+		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Rock</genre>
-		<art>"images/Panic!_At_The_Disco_A_Fever_you_Can't_Sweat_Out"</art>
+		<art>"images/a_fever_you_can't_sweat_out"</art>
     </song>
     <song>
-		<title>intermission</title>
+		<title>Intermission</title>
 		<artist>Panic! At The Disco</artist>
-		<album>FEVER YOU CAN’T SWEAT OUT</album>
+		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Techno</genre>
-		<art>"images/Panic!_At_The_Disco_A_Fever_you_Can't_Sweat_Out"</art>
+		<art>"images/a_fever_you_can't_sweat_out"</art>
     </song>
     <song>
-		<title>let's kill tonight</title>
+		<title>Let's Kill Tonight</title>
 		<artist>Panic! At The Disco</artist>
-		<album>VICE AND VIRTUES</album>
+		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Panic!_at_the_Disco_-_Vices_&#38;_Virtues"</art>
+		<art>"images/vices_&#38;_virtues"</art>
     </song>
     <song>
 		<title>High Hopes</title>
 		<artist>Panic! At The Disco</artist>
-		<album>PRAY FOR THE WICKED</album>
+		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"images/PRAY_FOR_THE_WICKED"</art>
+		<art>"images/pray_for_the_wicked"</art>
     </song>
     <song>
 		<title>Hey Look Ma, I Made It</title>
 		<artist>Panic! At The Disco</artist>
-		<album>PRAY FOR THE WICKED</album>
+		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"images/PRAY_FOR_THE_WICKED"</art>
+		<art>"images/pray_for_the_wicked"</art>
     </song>
     <song>
 		<title>Do I Wanna Know?</title>
@@ -343,7 +343,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>alternative/indie</genre>
-		<art>"images/AM"</art>
+		<art>"images/am"</art>
     </song>
     <song>
 		<title>R U Mine?</title>
@@ -351,47 +351,47 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>Garage rock</genre>
-		<art>"images/AM"</art>
+		<art>"images/am"</art>
     </song>
     <song>
-		<title>american sports</title>
+		<title>American Sports</title>
 		<artist>arctic monkeys</artist>
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Tranquility_Base_Hotel_and_Casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino"</art>
     </song>
     <song>
-		<title> star treatment</title>
+		<title> Star Treatment</title>
 		<artist>Arctic Monkeys</artist>
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Tranquility_Base_Hotel_and_Casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino"</art>
     </song>
     <song>
-		<title>brianstorm</title>
+		<title>Brianstorm</title>
 		<artist>Arctic Monkeys</artist>
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Favourite_Worst_Nightmare"</art>
+		<art>"images/favourite_worst_nightmare"</art>
     </song>
     <song>
-		<title>teddy picker</title>
+		<title>Teddy Picker</title>
 		<artist>Arctic Monkeys</artist>
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/Favourite_Worst_Nightmare"</art>
+		<art>"images/favourite_worst_nightmare"</art>
     </song>
     <song>
-		<title>bennie and the jets</title>
+		<title>Bennie And The Jets</title>
 		<artist>Elton John</artist>
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"images/Goodbye_Yellow_Brick_Road"</art>
+		<art>"images/goodbye_yellow_brick_road"</art>
     </song>
     <song>
 		<title>Goodbye Yellow Brick Road</title>
@@ -399,37 +399,37 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"images/Goodbye_Yellow_Brick_Road"</art>
+		<art>"images/goodbye_yellow_brick_road"</art>
     </song>
     <song>
-		<title>crazy water</title>
+		<title>Crazy water</title>
 		<artist>Elton John</artist>
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"images/Blue_Moves"</art>
+		<art>"images/blue_moves"</art>
     </song>
     <song>
-		<title>tonight</title>
+		<title>Tonight</title>
 		<artist>Elton John</artist>
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"images/Blue_Moves"</art>
+		<art>"images/blue_moves"</art>
     </song>
     <song>
-		<title>tiny dancer</title>
+		<title>Tiny Dancer</title>
 		<artist>Elton John</artist>
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"images/Madman_Across_the_Water"</art>
+		<art>"images/madman_across_the_water"</art>
     </song><song>
-		<title>goodbye</title>
+		<title>Goodbye</title>
 		<artist>Elton John</artist>
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"images/Madman_Across_the_Water"</art>
+		<art>"images/madman_across_the_water"</art>
     </song>
 </song_list>
