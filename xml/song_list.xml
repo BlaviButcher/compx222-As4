@@ -7,7 +7,7 @@
         <album>Images and Words</album>
         <year>1992</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/images_and_words.jpg"</art>
+        <art>"images/images_and_words.jpg"</art>
 	</song>
     <song>
         <title>Pull Me Under</title>
@@ -15,7 +15,7 @@
         <album>Images and Words</album>
         <year>1992</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/images_and_words.jpg"</art>
+        <art>"images/images_and_words.jpg"</art>
 	</song>
     <song>
         <title>Octavarium</title>
@@ -23,7 +23,7 @@
         <album>Octavarium</album>
         <year>2005</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/octavarium.jpg"</art>
+        <art>"images/octavarium.jpg"</art>
 	</song>
     <song>
         <title>The Root of All Evil</title>
@@ -31,7 +31,7 @@
         <album>Octavarium</album>
         <year>2005</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/octavarium.jpg"</art>
+        <art>"images/octavarium.jpg"</art>
 	</song>
     <song>
         <title>Disappear</title>
@@ -39,7 +39,7 @@
         <album>Six Degrees of Inner Turbulence</album>
         <year>2002</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/six_degrees_of_inner_turbulence.jpg"</art>
+        <art>"images/six_degrees_of_inner_turbulence.jpg"</art>
 	</song>
     <song>
         <title>Solitary Shell</title>
@@ -47,7 +47,7 @@
         <album>Six Degrees of Inner Turbulence</album>
         <year>2002</year>
         <genre>Progressive Metal</genre>
-        <art>"../images/six_degrees_of_inner_turbulence.jpg"</art>
+        <art>"images/six_degrees_of_inner_turbulence.jpg"</art>
 	</song>
     <song>
         <title>Heathaze</title>
@@ -55,7 +55,7 @@
         <album>Duke</album>
         <year>1980</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/duke.jpg"</art>
+        <art>"images/duke.jpg"</art>
 	</song>
     <song>
         <title>Turn it On Again</title>
@@ -63,7 +63,7 @@
         <album>Duke</album>
         <year>1980</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/duke.jpg"</art>
+        <art>"images/duke.jpg"</art>
 	</song>
     <song>
         <title>Dancing with the Moonlit Knight</title>
@@ -71,7 +71,7 @@
         <album>Selling England By the Pound</album>
         <year>1973</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/selling_england_by_the_pound.jpg"</art>
+        <art>"images/selling_england_by_the_pound.jpg"</art>
 	</song>
     <song>
         <title>Firth of Fifth</title>
@@ -79,7 +79,7 @@
         <album>Selling England By the Pound</album>
         <year>1973</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/selling_england_by_the_pound.jpg"</art>
+        <art>"images/selling_england_by_the_pound.jpg"</art>
 	</song>
     <song>
         <title>Anyway</title>
@@ -87,7 +87,7 @@
         <album>The Lamb Lies Down on Broadway</album>
         <year>1974</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/the_lamb_lies_down_on_broadway.jpg"</art>
+        <art>"images/the_lamb_lies_down_on_broadway.jpg"</art>
 	</song>
     <song>
         <title>Carpet Crawlers</title>
@@ -95,7 +95,7 @@
         <album>The Lamb Lies Down on Broadway</album>
         <year>1974</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/the_lamb_lies_down_on_broadway.jpg"</art>
+        <art>"images/the_lamb_lies_down_on_broadway.jpg"</art>
 	</song>
     <song>
         <title>Arrow</title>
@@ -103,7 +103,7 @@
         <album>Godbluff</album>
         <year>1975</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/godbluff.jpg"</art>
+        <art>"images/godbluff.jpg"</art>
 	</song>
     <song>
         <title>The Undercover Man</title>
@@ -111,7 +111,7 @@
         <album>Godbluff</album>
         <year>1975</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/godbluff.jpg"</art>
+        <art>"images/godbluff.jpg"</art>
 	</song>
     <song>
         <title>Killers</title>
@@ -119,7 +119,7 @@
         <album>H to He, Who Am the Only One</album>
         <year>1970</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/h_to_he_who_am_the_only_one.jpg"</art>
+        <art>"images/h_to_he_who_am_the_only_one.jpg"</art>
 	</song>
     <song>
         <title>1970</title>
@@ -127,7 +127,7 @@
         <album>H to He, Who Am the Only One</album>
         <year></year>
         <genre>Progressive Rock</genre>
-        <art>"../images/h_to_he_who_am_the_only_one.jpg"</art>
+        <art>"images/h_to_he_who_am_the_only_one.jpg"</art>
 	</song>
     <song>
         <title>Cat's Eye / Yellow Fever (Running)</title>
@@ -135,7 +135,7 @@
         <album>The Quiet Zone/The Pleasure Dome</album>
         <year>1977</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/the_quiet_zone_the_pleasure_dome.jpg"</art>
+        <art>"images/the_quiet_zone_the_pleasure_dome.jpg"</art>
 	</song>
     <song>
         <title>The Sphinx in the Face</title>
@@ -143,7 +143,7 @@
         <album>The Quiet Zone/The Pleasure Dome</album>
         <year>1977</year>
         <genre>Progressive Rock</genre>
-        <art>"../images/the_quiet_zone_the_pleasure_dome.jpg"</art>
+        <art>"images/the_quiet_zone_the_pleasure_dome.jpg"</art>
 	</song>
     <song>
         <title>In Bloom</title>
@@ -151,7 +151,7 @@
         <album>Nevermind</album>
         <year>1991</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/nevermind.jpg"</art>
     </song>
     <song>
         <title>Stay Away</title>
@@ -159,7 +159,7 @@
         <album>Nevermind</album>
         <year>1991</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/nevermind.jpg"</art>
     </song>
     <song>
         <title>Dumb</title>
@@ -167,7 +167,7 @@
         <album>In Utero</album>
         <year>1993</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/in_utero.jpg"</art>
     </song>
     <song>
         <title>Heart-Shaped Box</title>
@@ -175,7 +175,7 @@
         <album>In Utero</album>
         <year>1993</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/in_utero.jpg"</art>
     </song>
     <song>
         <title>Where Did You Sleep Last Night</title>
@@ -183,7 +183,7 @@
         <album>MTV Unplugged In New York</album>
         <year>1994</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/mtv_unplugged_in_new_york.png"</art>
     </song>
     <song>
         <title>Lake Of Fire</title>
@@ -191,7 +191,7 @@
         <album>MTV Unplugged In New York</album>
         <year>1994</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"images/mtv_unplugged_in_new_york.png"</art>
     </song>
     <song>
         <title>Stuck with Me</title>
@@ -199,7 +199,7 @@
         <album>Insomniac</album>
         <year>1995</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/insomniac.jpg"</art>
     </song>
     <song>
         <title>Brain Stew</title>
@@ -207,7 +207,7 @@
         <album>Insomniac</album>
         <year>1995</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/insomniac.jpg"</art>
     </song>
     <song>
         <title>Welcome to Paradise</title>
@@ -215,7 +215,7 @@
         <album>Dookie</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/dookie.png"</art>
     </song>
     <song>
         <title>When I Come Around</title>
@@ -223,7 +223,7 @@
         <album>Dookie</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/dookie.png"</art>
     </song>
     <song>
         <title>Jesus of Suburbia</title>
@@ -231,7 +231,7 @@
         <album>American Idiot</album>
         <year>2004</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/american_idiot.png"</art>
     </song>
     <song>
         <title>American Idiot</title>
@@ -239,23 +239,23 @@
         <album>American Idiot</album>
         <year>2004</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/american_idiot.png"</art>
     </song>
     <song>
         <title>Way Down The Line</title>
         <artist>The Offspring</artist>
-        <album>Ixany On The Hombre</album>
+        <album>Ixnay On The Hombre</album>
         <year>1997</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/ixnay_on_the_hombre.jpg"</art>
     </song>
     <song>
         <title>All I Want</title>
         <artist>The Offspring</artist>
-        <album>Ixany On The Hombre</album>
+        <album>Ixnay On The Hombre</album>
         <year>1997</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/ixnay_on_the_hombre.jpg"</art>
     </song>
     <song>
         <title>Why Don't You Get A Job</title>
@@ -263,7 +263,7 @@
         <album>Americana</album>
         <year>1998</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/americana.png"</art>
     </song>
     <song>
         <title>The Kids Aren't Alright</title>
@@ -271,7 +271,7 @@
         <album>Americana</album>
         <year>1998</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/americana.png"</art>
     </song>
     <song>
         <title>Self Esteem</title>
@@ -279,7 +279,7 @@
         <album>Smash</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/smash.png"</art>
     </song>
     <song>
         <title>Come Out and Play</title>
@@ -287,7 +287,7 @@
         <album>Smash</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"images/smash.png"</art>
     </song>
     <song>
 		<title>The Ballad of Mona Lisa</title>
@@ -295,7 +295,7 @@
 		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/vices_&#38;_virtues"</art>
+		<art>"images/vices_&#38;_virtues"</art>
     </song>
 	<song>
 		<title>I Write Sins Not Tragedies </title>
@@ -303,7 +303,7 @@
 		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Rock</genre>
-		<art>"../images/a_fever_you_can't_sweat_out"</art>
+		<art>"images/a_fever_you_can't_sweat_out"</art>
     </song>
     <song>
 		<title>Intermission</title>
@@ -311,7 +311,7 @@
 		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Techno</genre>
-		<art>"../images/a_fever_you_can't_sweat_out"</art>
+		<art>"images/a_fever_you_can't_sweat_out"</art>
     </song>
     <song>
 		<title>Let's Kill Tonight</title>
@@ -319,7 +319,7 @@
 		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/vices_&#38;_virtues"</art>
+		<art>"images/vices_&#38;_virtues"</art>
     </song>
     <song>
 		<title>High Hopes</title>
@@ -327,7 +327,7 @@
 		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"../images/pray_for_the_wicked"</art>
+		<art>"images/pray_for_the_wicked"</art>
     </song>
     <song>
 		<title>Hey Look Ma, I Made It</title>
@@ -335,7 +335,7 @@
 		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"../images/pray_for_the_wicked"</art>
+		<art>"images/pray_for_the_wicked"</art>
     </song>
     <song>
 		<title>Do I Wanna Know?</title>
@@ -343,7 +343,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>alternative/indie</genre>
-		<art>"../images/am"</art>
+		<art>"images/am"</art>
     </song>
     <song>
 		<title>R U Mine?</title>
@@ -351,7 +351,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>Garage rock</genre>
-		<art>"../images/am"</art>
+		<art>"images/am"</art>
     </song>
     <song>
 		<title>American Sports</title>
@@ -359,7 +359,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/tranquility_base_hotel_and_casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino"</art>
     </song>
     <song>
 		<title> Star Treatment</title>
@@ -367,7 +367,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/tranquility_base_hotel_and_casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino"</art>
     </song>
     <song>
 		<title>Brianstorm</title>
@@ -375,7 +375,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/favourite_worst_nightmare"</art>
+		<art>"images/favourite_worst_nightmare"</art>
     </song>
     <song>
 		<title>Teddy Picker</title>
@@ -383,7 +383,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"../images/favourite_worst_nightmare"</art>
+		<art>"images/favourite_worst_nightmare"</art>
     </song>
     <song>
 		<title>Bennie And The Jets</title>
@@ -391,7 +391,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"../images/goodbye_yellow_brick_road"</art>
+		<art>"images/goodbye_yellow_brick_road"</art>
     </song>
     <song>
 		<title>Goodbye Yellow Brick Road</title>
@@ -399,7 +399,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"../images/goodbye_yellow_brick_road"</art>
+		<art>"images/goodbye_yellow_brick_road"</art>
     </song>
     <song>
 		<title>Crazy water</title>
@@ -407,7 +407,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"../images/blue_moves"</art>
+		<art>"images/blue_moves"</art>
     </song>
     <song>
 		<title>Tonight</title>
@@ -415,7 +415,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"../images/blue_moves"</art>
+		<art>"images/blue_moves"</art>
     </song>
     <song>
 		<title>Tiny Dancer</title>
@@ -423,13 +423,13 @@
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"../images/madman_across_the_water"</art>
+		<art>"images/madman_across_the_water"</art>
     </song><song>
 		<title>Goodbye</title>
 		<artist>Elton John</artist>
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"../images/madman_across_the_water"</art>
+		<art>"images/madman_across_the_water"</art>
     </song>
 </song_list>
