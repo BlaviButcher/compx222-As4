@@ -295,7 +295,7 @@
 		<album>VICE AND VIRTUES</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Panic!_at_the_Disco_-_Vices_&#38;_Virtues"</art>
     </song>
 	<song>
 		<title>I Write Sins Not Tragedies </title>
@@ -303,7 +303,7 @@
 		<album>FEVER YOU CAN’T SWEAT OUT</album>
 		<year>2005</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Panic!_At_The_Disco_A_Fever_you_Can't_Sweat_Out"</art>
     </song>
     <song>
 		<title>intermission</title>
@@ -311,7 +311,7 @@
 		<album>FEVER YOU CAN’T SWEAT OUT</album>
 		<year>2005</year>
 		<genre>Techno</genre>
-		<art></art>
+		<art>"../images/Panic!_At_The_Disco_A_Fever_you_Can't_Sweat_Out"</art>
     </song>
     <song>
 		<title>let's kill tonight</title>
@@ -319,7 +319,7 @@
 		<album>VICE AND VIRTUES</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Panic!_at_the_Disco_-_Vices_&#38;_Virtues"</art>
     </song>
     <song>
 		<title>High Hopes</title>
@@ -327,7 +327,7 @@
 		<album>PRAY FOR THE WICKED</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art></art>
+		<art>"../images/PRAY_FOR_THE_WICKED"</art>
     </song>
     <song>
 		<title>Hey Look Ma, I Made It</title>
@@ -335,7 +335,7 @@
 		<album>PRAY FOR THE WICKED</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art></art>
+		<art>"../images/PRAY_FOR_THE_WICKED"</art>
     </song>
     <song>
 		<title>Do I Wanna Know?</title>
@@ -343,7 +343,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>alternative/indie</genre>
-		<art></art>
+		<art>"../images/AM"</art>
     </song>
     <song>
 		<title>R U Mine?</title>
@@ -351,7 +351,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>Garage rock</genre>
-		<art></art>
+		<art>"../images/AM"</art>
     </song>
     <song>
 		<title>american sports</title>
@@ -359,7 +359,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Tranquility_Base_Hotel_and_Casino"</art>
     </song>
     <song>
 		<title> star treatment</title>
@@ -367,7 +367,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Tranquility_Base_Hotel_and_Casino"</art>
     </song>
     <song>
 		<title>brianstorm</title>
@@ -375,7 +375,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Favourite_Worst_Nightmare"</art>
     </song>
     <song>
 		<title>teddy picker</title>
@@ -383,7 +383,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art></art>
+		<art>"../images/Favourite_Worst_Nightmare"</art>
     </song>
     <song>
 		<title>bennie and the jets</title>
@@ -391,7 +391,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Goodbye_Yellow_Brick_Road"</art>
     </song>
     <song>
 		<title>Goodbye Yellow Brick Road</title>
@@ -399,7 +399,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Goodbye_Yellow_Brick_Road"</art>
     </song>
     <song>
 		<title>crazy water</title>
@@ -407,7 +407,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Blue_Moves"</art>
     </song>
     <song>
 		<title>tonight</title>
@@ -415,7 +415,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Blue_Moves"</art>
     </song>
     <song>
 		<title>tiny dancer</title>
@@ -423,13 +423,13 @@
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Madman_Across_the_Water"</art>
     </song><song>
 		<title>goodbye</title>
 		<artist>Elton John</artist>
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art></art>
+		<art>"../images/Madman_Across_the_Water"</art>
     </song>
 </song_list>
