@@ -151,7 +151,7 @@
         <album>Nevermind</album>
         <year>1991</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/nevermind.jpg"</art>
     </song>
     <song>
         <title>Stay Away</title>
@@ -159,7 +159,7 @@
         <album>Nevermind</album>
         <year>1991</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/nevermind.jpg"</art>
     </song>
     <song>
         <title>Dumb</title>
@@ -167,7 +167,7 @@
         <album>In Utero</album>
         <year>1993</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/in_utero.jpg"</art>
     </song>
     <song>
         <title>Heart-Shaped Box</title>
@@ -175,7 +175,7 @@
         <album>In Utero</album>
         <year>1993</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/in_utero.jpg"</art>
     </song>
     <song>
         <title>Where Did You Sleep Last Night</title>
@@ -183,7 +183,7 @@
         <album>MTV Unplugged In New York</album>
         <year>1994</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/mtv_unplugged_in_new_york.png"</art>
     </song>
     <song>
         <title>Lake Of Fire</title>
@@ -191,7 +191,7 @@
         <album>MTV Unplugged In New York</album>
         <year>1994</year>
         <genre>Grunge</genre>
-        <art>"../images/"</art>
+        <art>"../images/mtv_unplugged_in_new_york.png"</art>
     </song>
     <song>
         <title>Stuck with Me</title>
@@ -199,7 +199,7 @@
         <album>Insomniac</album>
         <year>1995</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/insomniac.jpg"</art>
     </song>
     <song>
         <title>Brain Stew</title>
@@ -207,7 +207,7 @@
         <album>Insomniac</album>
         <year>1995</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/insomniac.jpg"</art>
     </song>
     <song>
         <title>Welcome to Paradise</title>
@@ -215,7 +215,7 @@
         <album>Dookie</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/dookie.png"</art>
     </song>
     <song>
         <title>When I Come Around</title>
@@ -223,7 +223,7 @@
         <album>Dookie</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/dookie.png"</art>
     </song>
     <song>
         <title>Jesus of Suburbia</title>
@@ -231,7 +231,7 @@
         <album>American Idiot</album>
         <year>2004</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/american_idiot.png"</art>
     </song>
     <song>
         <title>American Idiot</title>
@@ -239,23 +239,23 @@
         <album>American Idiot</album>
         <year>2004</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/american_idiot.png"</art>
     </song>
     <song>
         <title>Way Down The Line</title>
         <artist>The Offspring</artist>
-        <album>Ixany On The Hombre</album>
+        <album>Ixnay On The Hombre</album>
         <year>1997</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/ixnay_on_the_hombre.jpg"</art>
     </song>
     <song>
         <title>All I Want</title>
         <artist>The Offspring</artist>
-        <album>Ixany On The Hombre</album>
+        <album>Ixnay On The Hombre</album>
         <year>1997</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/ixnay_on_the_hombre.jpg"</art>
     </song>
     <song>
         <title>Why Don't You Get A Job</title>
@@ -263,7 +263,7 @@
         <album>Americana</album>
         <year>1998</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/americana.png"</art>
     </song>
     <song>
         <title>The Kids Aren't Alright</title>
@@ -271,7 +271,7 @@
         <album>Americana</album>
         <year>1998</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/americana.png"</art>
     </song>
     <song>
         <title>Self Esteem</title>
@@ -279,7 +279,7 @@
         <album>Smash</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/smash.png"</art>
     </song>
     <song>
         <title>Come Out and Play</title>
@@ -287,7 +287,7 @@
         <album>Smash</album>
         <year>1994</year>
         <genre>Punk Rock</genre>
-        <art>"../images/"</art>
+        <art>"../images/smash.png"</art>
     </song>
     <song>
 		<title>The Ballad of Mona Lisa</title>
