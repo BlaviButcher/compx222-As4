@@ -34,15 +34,24 @@ if (file_exists('xml/song_list.xml')) {
                 <img src=$song->art alt=''>
             </div>
             <div class='info-wrap'>
-                <div class='field-1'>$song->title</div>
-                <div class='field-2'>$song->artist</div>
-                <div class='field-3'>$song->album</div>
+                <div class='field-1'><strong>Title: </strong>$song->title</div>
+                <div class='field-2'><strong>Artist: </strong>$song->artist</div>
+                <div class='field-3'><strong>Album: </strong>$song->album</div>
             </div>
         </div>";
         }
 
         ?>
-
+        <div class='grid-item'>
+            <div class='img-wrap'>
+                <img src='images/dookie.png' alt=''>
+            </div>
+            <div class='info-wrap'>
+                <div class='field-1'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
+                <div class='field-2'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
+                <div class='field-3'>fdsahsdfhsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj hsdgjhfgdj</div>
+            </div>
+        </div>
 
     </div>
 

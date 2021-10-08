@@ -295,7 +295,7 @@
 		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/vices_&#38;_virtues"</art>
+		<art>"images/vices_&#38;_virtues.jpg"</art>
     </song>
 	<song>
 		<title>I Write Sins Not Tragedies </title>
@@ -303,7 +303,7 @@
 		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Rock</genre>
-		<art>"images/a_fever_you_can't_sweat_out"</art>
+		<art>"images/a_fever_you_can't_sweat_out.jpg"</art>
     </song>
     <song>
 		<title>Intermission</title>
@@ -311,7 +311,7 @@
 		<album>Fever You Can't Sweat Out</album>
 		<year>2005</year>
 		<genre>Techno</genre>
-		<art>"images/a_fever_you_can't_sweat_out"</art>
+		<art>"images/a_fever_you_can't_sweat_out.jpg"</art>
     </song>
     <song>
 		<title>Let's Kill Tonight</title>
@@ -319,7 +319,7 @@
 		<album>Vice And Virtues</album>
 		<year>2011</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/vices_&#38;_virtues"</art>
+		<art>"images/vices_&#38;_virtues.jpg"</art>
     </song>
     <song>
 		<title>High Hopes</title>
@@ -327,7 +327,7 @@
 		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"images/pray_for_the_wicked"</art>
+		<art>"images/pray_for_the_wicked.jpg"</art>
     </song>
     <song>
 		<title>Hey Look Ma, I Made It</title>
@@ -335,7 +335,7 @@
 		<album>Pray For The Wicked</album>
 		<year>2018</year>
 		<genre>alternative/indie</genre>
-		<art>"images/pray_for_the_wicked"</art>
+		<art>"images/pray_for_the_wicked.jpg"</art>
     </song>
     <song>
 		<title>Do I Wanna Know?</title>
@@ -343,7 +343,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>alternative/indie</genre>
-		<art>"images/am"</art>
+		<art>"images/am.jpg"</art>
     </song>
     <song>
 		<title>R U Mine?</title>
@@ -351,7 +351,7 @@
 		<album>AM</album>
 		<year>2013</year>
 		<genre>Garage rock</genre>
-		<art>"images/am"</art>
+		<art>"images/am.jpg"</art>
     </song>
     <song>
 		<title>American Sports</title>
@@ -359,7 +359,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/tranquility_base_hotel_and_casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino.jpg"</art>
     </song>
     <song>
 		<title> Star Treatment</title>
@@ -367,7 +367,7 @@
 		<album>Tranquility Base Hotel &#38; Casino</album>
 		<year>2018</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/tranquility_base_hotel_and_casino"</art>
+		<art>"images/tranquility_base_hotel_and_casino.jpg"</art>
     </song>
     <song>
 		<title>Brianstorm</title>
@@ -375,7 +375,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/favourite_worst_nightmare"</art>
+		<art>"images/favourite_worst_nightmare.jpg"</art>
     </song>
     <song>
 		<title>Teddy Picker</title>
@@ -383,7 +383,7 @@
 		<album>Favourite Worst Nightmare</album>
 		<year>2007</year>
 		<genre>Alternative/Indie</genre>
-		<art>"images/favourite_worst_nightmare"</art>
+		<art>"images/favourite_worst_nightmare.jpg"</art>
     </song>
     <song>
 		<title>Bennie And The Jets</title>
@@ -391,7 +391,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"images/goodbye_yellow_brick_road"</art>
+		<art>"images/goodbye_yellow_brick_road.jpg"</art>
     </song>
     <song>
 		<title>Goodbye Yellow Brick Road</title>
@@ -399,7 +399,7 @@
 		<album>Goodbye Yellow Brick Road</album>
 		<year>1973</year>
 		<genre>Rock</genre>
-		<art>"images/goodbye_yellow_brick_road"</art>
+		<art>"images/goodbye_yellow_brick_road.jpg"</art>
     </song>
     <song>
 		<title>Crazy water</title>
@@ -407,7 +407,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"images/blue_moves"</art>
+		<art>"images/blue_moves.jpg"</art>
     </song>
     <song>
 		<title>Tonight</title>
@@ -415,7 +415,7 @@
 		<album>Blue Moves</album>
 		<year>1976</year>
 		<genre>Rock</genre>
-		<art>"images/blue_moves"</art>
+		<art>"images/blue_moves.jpg"</art>
     </song>
     <song>
 		<title>Tiny Dancer</title>
@@ -423,7 +423,7 @@
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"images/madman_across_the_water"</art>
+		<art>"images/madman_across_the_water.jpg"</art>
     </song>
     <song>
         <title>Goodbye</title>
@@ -431,6 +431,6 @@
 		<album>Madman Across the Water</album>
 		<year>1971</year>
 		<genre>Rock</genre>
-		<art>"images/madman_across_the_water"</art>
+		<art>"images/madman_across_the_water.jpg"</art>
     </song>
 </song_list>
