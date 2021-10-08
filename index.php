@@ -25,24 +25,25 @@ if (file_exists('xml/song_list.xml')) {
 
 <body>
     <div class="grid-container">
-        <div class="grid-item">
-            <div class="img-wrap">
-                <img src="images/dookie.png" alt="">
+
+
+        <?php
+        foreach ($song_list->children() as $song) {
+            echo "<div class='grid-item'>
+            <div class='img-wrap'>
+                <img src=$song->art alt=''>
             </div>
-            <div class="info-wrap">
-                <div class="field-1">Song Title Song TitleSong Title Song TitleSong Title</div>
-                <div class="field-2">Song Artist Song Artist Song Artist Song Artist Song Artist</div>
-                <div class="field-3">Song Album Song Album Song Album Song Album Song Album Song Album</div>
+            <div class='info-wrap'>
+                <div class='field-1'>$song->title</div>
+                <div class='field-2'>$song->artist</div>
+                <div class='field-3'>$song->album</div>
             </div>
-        </div>
-        <div class="grid-item">
-        </div>
-        <div class="grid-item">
-        </div>
-        <div class="grid-item">
-        </div>
-        <div class="grid-item">
-        </div>
+        </div>";
+        }
+
+        ?>
+
+
     </div>
 
 </body>

@@ -102,3 +102,82 @@
 [09-Oct-2021 01:05:50 Europe/Berlin] Loaded 54 songs
 [09-Oct-2021 01:06:18 Europe/Berlin] Loaded 54 songs
 [09-Oct-2021 01:06:27 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:22:34 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:22:48 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:23:03 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:23:11 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:24:01 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:24:08 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:24:51 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:25:07 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:26:46 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:27:23 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:27:37 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:37 Europe/Berlin] PHP Warning:  Undefined variable $art in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 34
+[09-Oct-2021 01:27:47 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:28:08 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:28:36 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:29:06 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:29:25 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:29:32 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:30:11 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:30:25 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:30:41 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:30:57 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:31:02 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:31:08 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:31:13 Europe/Berlin] Loaded 54 songs
+[09-Oct-2021 01:32:23 Europe/Berlin] Loaded 54 songs
