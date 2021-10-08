@@ -424,8 +424,9 @@
 		<year>1971</year>
 		<genre>Rock</genre>
 		<art>"images/madman_across_the_water"</art>
-    </song><song>
-		<title>Goodbye</title>
+    </song>
+    <song>
+        <title>Goodbye</title>
 		<artist>Elton John</artist>
 		<album>Madman Across the Water</album>
 		<year>1971</year>
