@@ -24,8 +24,20 @@ if (file_exists('xml/song_list.xml')) {
 </head>
 
 <body>
-    <div class="grid-container">
 
+    <header>
+        <div id="search-wrap">
+            <div id="search-icon">
+                <img id="search-img" src="images/magnifying-glass.png" alt="">
+            </div>
+            <div id="search-container">
+                <div id="search-box" contenteditable>sdftsdhf</div>
+                <div id="search-go-button">GO</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid-container">
 
         <?php
         foreach ($song_list->children() as $song) {
@@ -42,7 +54,6 @@ if (file_exists('xml/song_list.xml')) {
         }
 
         ?>
-
 
     </div>
 
