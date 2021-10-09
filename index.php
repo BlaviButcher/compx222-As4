@@ -13,23 +13,26 @@ if (file_exists('xml/song_list.xml')) {
 
 <?php
 
-$songs = array();
+// $songs = array();
 
-foreach ($song_list->children() as $song) {
-}
+// foreach ($song_list->children() as $song) {
+//     $songs[] = array(
+//         'title'
+//     )
+// }
 
 
-function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
-    $reference_array = array();
+// function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
+//     $reference_array = array();
 
-    // extract the column we want to sort by
-    foreach ($array as $key => $row) {
-        $reference_array[$key] = $row[$column];
-    }
+//     // extract the column we want to sort by
+//     foreach ($array as $key => $row) {
+//         $reference_array[$key] = $row[$column];
+//     }
 
-    // sort using extracted column as reference
-    array_multisort($reference_array, $direction, $array);
-}
+//     // sort using extracted column as reference
+//     array_multisort($reference_array, $direction, $array);
+// }
 ?>
 
 <!DOCTYPE html>
