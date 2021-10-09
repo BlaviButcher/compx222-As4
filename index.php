@@ -40,6 +40,7 @@ if (isset($_POST["search"])) {
 //     // sort using extracted column as reference
 //     array_multisort($reference_array, $direction, $array);
 // }
+
 ?>
 
 <!DOCTYPE html>
@@ -55,21 +56,7 @@ if (isset($_POST["search"])) {
 </head>
 
 <body>
-
-    <header>
-        <div id="search-wrap">
-            <div id="search-icon">
-                <img id="search-img" src="images/magnifying-glass.png" alt="">
-            </div>
-            <div id="search-container">
-                <div id="search-box" contenteditable>sdftsdhf</div>
-                <div id="search-go-button">GO</div>
-            </div>
-        </div>
-    </header>
-
     <div class="grid-container">
-
 
 
         <?php
@@ -87,6 +74,7 @@ if (isset($_POST["search"])) {
         }
 
         ?>
+
 
     </div>
 </body>
