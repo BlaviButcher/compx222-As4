@@ -9,27 +9,7 @@ if (file_exists('xml/song_list.xml')) {
     error_log("Loaded " . $song_list->count() . " songs", 0);
 } else exit('Failed to open xml/song_list.xml');
 
-?>
 
-<?php
-
-$songs = array();
-
-foreach ($song_list->children() as $song) {
-}
-
-
-function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
-    $reference_array = array();
-
-    // extract the column we want to sort by
-    foreach ($array as $key => $row) {
-        $reference_array[$key] = $row[$column];
-    }
-
-    // sort using extracted column as reference
-    array_multisort($reference_array, $direction, $array);
-}
 ?>
 
 <!DOCTYPE html>
@@ -44,21 +24,7 @@ function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
 </head>
 
 <body>
-
-    <header>
-        <div id="search-wrap">
-            <div id="search-icon">
-                <img id="search-img" src="images/magnifying-glass.png" alt="">
-            </div>
-            <div id="search-container">
-                <div id="search-box" contenteditable>sdftsdhf</div>
-                <div id="search-go-button">GO</div>
-            </div>
-        </div>
-    </header>
-
     <div class="grid-container">
-
 
 
         <?php
@@ -76,6 +42,7 @@ function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
         }
 
         ?>
+
 
     </div>
 
