@@ -31,9 +31,8 @@ foreach ($song_list->children() as $song) {
         'genre' => (string)$song->genre,
         'art' => (string)$song->art
     );
-    // var_dump($songs);
 
-    array_sort_by_column($songs, 'title');
+    array_sort_by_column($songs, 'artist');
 }
 ?>
 
