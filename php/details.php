@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <?php
-    
+
 
 ?>
 
-?>
 <html lang="en">
 
 <head>
@@ -20,8 +19,8 @@
 
 
         <?php
-        
-            echo "<div class='grid-item'>
+
+        echo "<div class='grid-item'>
             <div class='img-wrap'>
                 <img src=../images/am.jpg alt=''>
             </div>
@@ -33,7 +32,7 @@
                 <div class='field-5'><strong>Album: </strong>$song->genre</div>
             </div>
         </div>";
-        
+
 
         ?>
 
