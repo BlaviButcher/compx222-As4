@@ -20,26 +20,37 @@ if (isset($_POST["search"])) {
 
 <?php
 
-// $songs = array();
+$songs = array();
 
-// foreach ($song_list->children() as $song) {
-//     $songs[] = array(
-//         'title'
-//     )
-// }
+foreach ($song_list->children() as $song) {
+    $songs[] = array(
+        'title' => (string)$song->title,
+        'artist' => (string)$song->artist,
+        'album' => (string)$song->album,
+        'year' => (int)$song->year,
+        'genre' => (string)$song->genre,
+        'art' => (string)$song->art
+    );
+    // var_dump($songs);
 
+    array_sort_by_column($songs, 'title');
+}
+?>
 
-// function array_sort_by_column(&$array, $column, $direction = SORT_ASC) {
-//     $reference_array = array();
+<?php
+function array_sort_by_column(&$array, $column) {
+    $reference_array = array();
 
-//     // extract the column we want to sort by
-//     foreach ($array as $key => $row) {
-//         $reference_array[$key] = $row[$column];
-//     }
+    // extract the column we want to sort by and put into $reference_array
+    foreach ($array as $key => $row) {
+        $reference_array[$key] = $row[$column];
+    }
 
-//     // sort using extracted column as reference
-//     array_multisort($reference_array, $direction, $array);
-// }
+    // sort using extracted column as reference. $reference_array is sorted
+    // then the corresponding indexes of the other array - $array - are sorted
+    // to matched the indexes of the first array $reference_array
+    array_multisort($reference_array, $array);
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,15 +85,25 @@ if (isset($_POST["search"])) {
 
 
         <?php
-        foreach ($song_list->children() as $song) {
+        for ($x = 0; $x < $song_list->count(); $x++) {
+            // circumvents error in templating
+            $title = $songs[$x]['title'];
+            $artist = $songs[$x]['artist'];
+            $album = $songs[$x]['album'];
+            $year = $songs[$x]['year'];
+            $genre = $songs[$x]['genre'];
+            $art = $songs[$x]['art'];
+
+
+
             echo "<div class='grid-item'>
             <div class='img-wrap'>
-                <img src=$song->art alt=''>
+                <img src=$art alt=''>
             </div>
             <div class='info-wrap'>
-                <div class='field-1'><strong>Title: </strong><span>$song->title</span></div>
-                <div class='field-2'><strong>Artist: </strong><span>$song->artist</span></div>
-                <div class='field-3'><strong>Album: </strong><span>$song->album</span></div>
+                <div class='field-1'><strong>Title: </strong><span>$title</span></div>
+                <div class='field-2'><strong>Artist: </strong><span>$artist</span></div>
+                <div class='field-3'><strong>Album: </strong><span>$album</span></div>
             </div>
         </div>";
         }
