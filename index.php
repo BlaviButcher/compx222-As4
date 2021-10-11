@@ -31,12 +31,12 @@ foreach ($song_list->children() as $song) {
         'genre' => (string)$song->genre,
         'art' => (string)$song->art
     );
-
-    array_sort_by_column($songs, 'title');
 }
+array_sort_by_column($songs, 'title');
 ?>
 
 <?php
+
 function array_sort_by_column(&$array, $column) {
     $reference_array = array();
 
@@ -44,7 +44,6 @@ function array_sort_by_column(&$array, $column) {
     foreach ($array as $key => $row) {
         $reference_array[$key] = $row[$column];
     }
-    // var_dump($reference_array);
 
     // sort using extracted column as reference. $reference_array is sorted
     // then the corresponding indexes of the other array - $array - are sorted

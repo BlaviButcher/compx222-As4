@@ -2590,3 +2590,4 @@
 [11-Oct-2021 01:03:46 Europe/Berlin] PHP Warning:  Undefined array key "year" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 93
 [11-Oct-2021 01:03:46 Europe/Berlin] PHP Warning:  Undefined array key "genre" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 94
 [11-Oct-2021 01:03:46 Europe/Berlin] PHP Warning:  Undefined array key "art" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 95
+[11-Oct-2021 01:27:43 Europe/Berlin] PHP Warning:  Undefined variable $reference_array in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 56
