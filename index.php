@@ -12,9 +12,14 @@ if (file_exists('xml/song_list.xml')) {
 
 <?php
 
-if (isset($_POST["search"])) {
-    error_log("sdfh", 0);
-}
+$isSearching = false;
+
+?>
+
+<?php
+
+if (isset($_GET["search"])) 
+    $isSearching = ($_GET["search"] == "\n" || $_GET["search"] == "") ? false : true;
 
 ?>
 
@@ -32,10 +37,50 @@ foreach ($song_list->children() as $song) {
         'art' => (string)$song->art
     );
 }
+
+
+
+$songs = song_array_search($songs);
+var_dump($songs);
 array_sort_by_column($songs, 'album');
+
 ?>
 
 <?php
+
+// Takes in a list of songs. Creates a new array and adds any song
+// that has a match in any enumarable column
+// Returns updated array
+function song_array_search($array) {
+
+    // new array to be pushed upon and returned
+    $newSongList = array();
+    // enumarable columns to search
+    $columnSearch = array("title", "artist", "album");
+
+    global $isSearching;
+    // if something was searched
+    if ($isSearching) {
+        $content = trim($_GET["search"]);
+        var_dump($content);
+        // get each song
+        foreach ($array as $song) {
+            
+            // search each column for a match
+            foreach ($columnSearch as $column) {
+                if (str_contains($song[$column], $content)) {
+                    // push if match
+                    array_push($newSongList, $song);
+                    break;
+                }
+            }
+            
+        }
+        return $newSongList;
+
+        // return array untouched 
+    } else return $array;
+}
 
 function array_sort_by_column(&$array, $column) {
     $reference_array = array();
@@ -84,17 +129,15 @@ function array_sort_by_column(&$array, $column) {
 
 
         <?php
-        for ($x = 0; $x < $song_list->count(); $x++) {
+        foreach ($songs as $song) {
+            $title = $song['title'];
+            $artist = $song['artist'];
+            $album = $song['album'];
+            $year = $song['year'];
+            $genre = $song['genre'];
+            $art = $song['art'];
+        
             // circumvents error in templating
-            $title = $songs[$x]['title'];
-            $artist = $songs[$x]['artist'];
-            $album = $songs[$x]['album'];
-            $year = $songs[$x]['year'];
-            $genre = $songs[$x]['genre'];
-            $art = $songs[$x]['art'];
-
-
-
             echo "<div class='grid-item'>
             <div class='img-wrap'>
                 <img src=$art alt=''>
