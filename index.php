@@ -41,7 +41,6 @@ foreach ($song_list->children() as $song) {
 
 
 $songs = song_array_search($songs);
-var_dump($songs);
 array_sort_by_column($songs, 'album');
 
 ?>
@@ -62,13 +61,12 @@ function song_array_search($array) {
     // if something was searched
     if ($isSearching) {
         $content = trim($_GET["search"]);
-        var_dump($content);
         // get each song
         foreach ($array as $song) {
             
             // search each column for a match
             foreach ($columnSearch as $column) {
-                if (str_contains($song[$column], $content)) {
+                if (str_contains(strtolower($song[$column]), strtolower($content))) {
                     // push if match
                     array_push($newSongList, $song);
                     break;
