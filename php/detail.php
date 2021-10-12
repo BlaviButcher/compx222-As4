@@ -15,16 +15,11 @@
             <img src='../images/AM.jpg' alt=''>
         </div>
         <div class='info-wrap'>
-            <div class='field-1'><strong>Title: </strong><span>asdghsda sdfagh sdgaw dsg sdagsdag asdgsda gasdg sdag
-                    sdag sdag sadgsdgsd adsg sdgsadfghsad gs</span></div>
-            <div class='field-2'><strong>Artist: </strong><span>asdghsda sdfagh sdgaw dsg sdagsdag asdgsda gasdg sdag
-                    sdag sdag sadgsdgsd adsg sdgsadfghsad gst</span></div>
-            <div class='field-3'><strong>Album: </strong><span>asdghsda sdfagh sdgaw dsg sdagsdag asdgsda gasdg sdag
-                    sdag sdag sadgsdgsd adsg sdgsadfghsad gs</span></div>
-            <div class='field-4'><strong>Year: </strong><span>asdghsda sdfagh sdgaw dsg sdagsdag asdgsda gasdg sdag
-                    sdag sdag sadgsdgsd adsg sdgsadfghsad gs</span></div>
-            <div class='field-5'><strong>Genre: </strong><span>asdghsda sdfagh sdgaw dsg sdagsdag asdgsda gasdg sdag
-                    sdag sdag sadgsdgsd adsg sdgsadfghsad gs</span></div>
+            <div class='field-1'><strong>Title: </strong><span>$title</span></div>
+            <div class='field-2'><strong>Artist: </strong><span>$artist</span></div>
+            <div class='field-3'><strong>Album: </strong><span>$album</span></div>
+            <div class='field-4'><strong>Year: </strong><span>$album</span></div>
+            <div class='field-5'><strong>Genre: </strong><span>$album</span></div>
         </div>
     </div>
 </body>
