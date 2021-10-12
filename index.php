@@ -32,7 +32,7 @@ foreach ($song_list->children() as $song) {
         'art' => (string)$song->art
     );
 }
-array_sort_by_column($songs, 'title');
+array_sort_by_column($songs, 'album');
 ?>
 
 <?php
