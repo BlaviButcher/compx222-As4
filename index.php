@@ -3,6 +3,7 @@ ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
+include("php/helper.php");
 
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
@@ -18,30 +19,16 @@ $isSearching = false;
 
 <?php
 
-if (isset($_GET["search"])) 
+if (isset($_GET["search"]))
     $isSearching = ($_GET["search"] == "\n" || $_GET["search"] == "") ? false : true;
 
 ?>
 
 <?php
 
-$songs = array();
-
-foreach ($song_list->children() as $song) {
-    $songs[] = array(
-        'title' => (string)$song->title,
-        'artist' => (string)$song->artist,
-        'album' => (string)$song->album,
-        'year' => (int)$song->year,
-        'genre' => (string)$song->genre,
-        'art' => (string)$song->art
-    );
-}
-
-
-
+$songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
-array_sort_by_column($songs, 'album');
+array_sort_by_column($songs, 'title');
 
 ?>
 
@@ -63,7 +50,7 @@ function song_array_search($array) {
         $content = trim($_GET["search"]);
         // get each song
         foreach ($array as $song) {
-            
+
             // search each column for a match
             foreach ($columnSearch as $column) {
                 if (str_contains(strtolower($song[$column]), strtolower($content))) {
@@ -72,7 +59,6 @@ function song_array_search($array) {
                     break;
                 }
             }
-            
         }
         return $newSongList;
 
@@ -134,7 +120,7 @@ function array_sort_by_column(&$array, $column) {
             $year = $song['year'];
             $genre = $song['genre'];
             $art = $song['art'];
-        
+
             // circumvents error in templating
             echo "<div class='grid-item'>
             <div class='img-wrap'>
@@ -152,6 +138,7 @@ function array_sort_by_column(&$array, $column) {
 
 
     </div>
+
 </body>
 
 </html>
