@@ -29,3 +29,11 @@ for (let item of document.getElementsByClassName("grid-item")) {
 
   });
 }
+
+
+// Stop the ability to create a new line in search box
+document.getElementById("search-box").addEventListener('keypress', (event) => {
+  if (event.key === "Enter") {
+      event.preventDefault();
+  }
+});
