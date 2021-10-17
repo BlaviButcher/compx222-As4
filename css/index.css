@@ -14,6 +14,7 @@ header {
 }
 
 #search-wrap {
+  margin-left: 150px;
   width: 40%;
   display: flex;
   min-height: 6rem;
@@ -92,4 +93,19 @@ img {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+}
+
+.dropdown button {
+  background-color: grey;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.dropdown-wrap {
+  margin-left: 20px;
+}
+
+header {
+  margin-top: 20px;
 }

@@ -28,7 +28,7 @@ if (isset($_GET["search"]))
 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
-array_sort_by_column($songs, 'title');
+array_sort_by_column($songs, 'artist');
 
 ?>
 
@@ -89,7 +89,10 @@ function array_sort_by_column(&$array, $column) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <script src="js/index.js" defer></script>
+    <script src="js/dropdown.js" defer></script>
+
     <title>Document</title>
 </head>
 
@@ -104,6 +107,22 @@ function array_sort_by_column(&$array, $column) {
             <div id="search-container">
                 <div id="search-box" contenteditable>sdftsdhf</div>
                 <div id="search-go-button">GO</div>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+        <div class="dropdown-wrap">
+            <div class="dropdown open">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Title</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Artist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Album</a>
+                </div>
             </div>
         </div>
     </header>
@@ -133,12 +152,18 @@ function array_sort_by_column(&$array, $column) {
             </div>
         </div>";
         }
-
         ?>
 
 
     </div>
 
+    <!-- These are only used for the toggle dropdown -->
+    <!-- Popper JS -->
+    <script src="js/bootstrap/pooper.min.js"></script>
+    <!-- jquery needed for bootstrap -->
+    <script src="js/jquery.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 </body>
 
 </html>
