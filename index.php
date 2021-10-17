@@ -100,28 +100,33 @@ function array_sort_by_column(&$array, $column) {
 
 
     <header>
-        <div id="search-wrap">
-            <div id="search-icon">
-                <img id="search-img" src="images/magnifying-glass.png" alt="">
-            </div>
-            <div id="search-container">
-                <div id="search-box" contenteditable>sdftsdhf</div>
-                <div id="search-go-button">GO</div>
+        <div id="left"></div>
+        <div id="middle">
+            <div id="search-wrap">
+                <div id="search-icon">
+                    <img id="search-img" src="images/magnifying-glass.png" alt="">
+                </div>
+                <div id="search-container">
+                    <div id="search-box" contenteditable>sdftsdhf</div>
+                    <div id="search-go-button">GO</div>
+                </div>
             </div>
         </div>
 
-        <!-- Dropdown -->
-        <div class="dropdown-wrap">
-            <div class="dropdown open">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sort
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item">Title</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">Artist</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">Album</a>
+        <div id="right">
+            <!-- Dropdown -->
+            <div class="dropdown-wrap">
+                <div class="dropdown open">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Title</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Artist</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Album</a>
+                    </div>
                 </div>
             </div>
         </div>
