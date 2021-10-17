@@ -117,11 +117,11 @@ function array_sort_by_column(&$array, $column) {
                     Sort
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Title</a>
+                    <a class="dropdown-item">Title</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Artist</a>
+                    <a class="dropdown-item">Artist</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Album</a>
+                    <a class="dropdown-item">Album</a>
                 </div>
             </div>
         </div>

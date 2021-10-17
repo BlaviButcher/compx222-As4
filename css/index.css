@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #e1e6eb !important;
+  padding-bottom: 30px;
 }
 
 header {
@@ -107,5 +108,5 @@ img {
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 30px;
 }
