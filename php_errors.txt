@@ -1,0 +1,1 @@
+[18-Oct-2021 01:27:51 Europe/Berlin] PHP Warning:  Undefined array key "search" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 25

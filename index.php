@@ -22,6 +22,7 @@ $isSearching = false;
 if (isset($_GET["search"]))
     $isSearching = ($_GET["search"] == "\n" || $_GET["search"] == "") ? false : true;
 
+
 ?>
 
 <?php
@@ -107,7 +108,11 @@ function array_sort_by_column(&$array, $column) {
                     <img id="search-img" src="images/magnifying-glass.png" alt="">
                 </div>
                 <div id="search-container">
-                    <div id="search-box" contenteditable>sdftsdhf</div>
+                    <div id="search-box" contenteditable>
+                        <?php if ($isSearching) echo $_GET["search"];
+                        else echo "";
+                        ?>
+                    </div>
                     <div id="search-go-button">GO</div>
                 </div>
             </div>
