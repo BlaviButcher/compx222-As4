@@ -1,13 +1,17 @@
+
+
 // Listens for a click event on the go button for the search bar.
 document
   .getElementById("search-go-button")
   .addEventListener("click", () => {
     // // Get the contents of the search box.
-    let request = document.getElementById("search-box").innerText;
+    let search = document.getElementById("search-box").innerText;
+    let order = document.getElementById("dropdownOrder").innerText;
 
     let url = new URL(window.location.href);
 
-    url.searchParams.set("search", request);
+    url.searchParams.set("search", search);
+    url.searchParams.set("order", order);
     window.location.href = url;
   });
 
@@ -42,4 +46,14 @@ document.getElementById("search-box").addEventListener('keypress', (event) => {
 document.getElementById("search-box").addEventListener("input", function(event) {
   event.target.style.caretColor = event.target.textContent == "" ? 'transparent' : 'black';
 });
+
+// Handles the visual change of the dropdown on click
+document.querySelectorAll("div.dropdown-menu a").forEach(dropdownItem => {
+  dropdownItem.addEventListener("click", (event) => {
+      let dropdownOrderMain = document.getElementById("dropdownOrder");
+      // needs concat empty for style purposes - thanks bootstrap
+      dropdownOrderMain.innerText = event.target.innerText + " ";
+  });
+});
+
 

@@ -29,7 +29,11 @@ if (isset($_GET["search"]))
 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
-array_sort_by_column($songs, 'artist');
+
+$searchOrder = "title";
+if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
+
+array_sort_by_column($songs, $searchOrder);
 
 ?>
 
@@ -122,8 +126,9 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?php if (isset($_GET["order"])) echo $_GET["order"];
+                        else echo "Title"; ?>
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item">Title</a>
