@@ -37,3 +37,9 @@ document.getElementById("search-box").addEventListener('keypress', (event) => {
       event.preventDefault();
   }
 });
+
+// if searchbox is empty hide cursors. Removes glitch
+document.getElementById("search-box").addEventListener("input", function(event) {
+  event.target.style.caretColor = event.target.textContent == "" ? 'transparent' : 'black';
+});
+

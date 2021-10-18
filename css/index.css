@@ -70,7 +70,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   overflow: hidden;
+  font-size: 1.4rem;
 }
 
 #search-go-button {

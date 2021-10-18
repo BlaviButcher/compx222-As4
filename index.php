@@ -109,7 +109,7 @@ function array_sort_by_column(&$array, $column) {
                 </div>
                 <div id="search-container">
                     <div id="search-box" contenteditable>
-                        <?php if ($isSearching) echo $_GET["search"];
+                        <?php if ($isSearching) echo trim($_GET["search"]);
                         else echo "";
                         ?>
                     </div>
