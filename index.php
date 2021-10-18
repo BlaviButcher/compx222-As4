@@ -1,35 +1,27 @@
 <?php
+
+// Setup error reporting and include helper.php for some handy functions.
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
-
 include("php/helper.php");
 
+// Check fot a song list. If it exists, load it. If not, log an error message.
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
 
-?>
-
-<?php
-
+// Check and record if the page is currently searching by observing the get request.
 $isSearching = false;
+if (isset($_GET["search"])) {
+    $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
+}
 
-?>
-
-<?php
-
-if (isset($_GET["search"]))
-    $isSearching = ($_GET["search"] == "\n" || $_GET["search"] == "") ? false : true;
-
-
-?>
-
-<?php
-
+// 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
+// 
 $searchOrder = "title";
 if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
@@ -66,9 +58,41 @@ function song_array_search($array) {
             }
         }
         return $newSongList;
+    }
 
-        // return array untouched 
-    } else return $array;
+    // If not searching, return the array untouched.
+    return $array;
+}
+
+// 
+function xmlSongsToAsscArray($song_list) {
+
+    $songs = array();
+
+    foreach ($song_list->children() as $song) {
+        $songs[] = array(
+            'title' => (string)$song->title,
+            'artist' => (string)$song->artist,
+            'album' => (string)$song->album,
+            'year' => (int)$song->year,
+            'genre' => (string)$song->genre,
+            'art' => (string)$song->art
+        );
+    }
+
+    return $songs;
+}
+
+// Gets the song content from the get request.
+function getSongContent($songs) {
+    $title = $_GET["title"];
+    $artist = $_GET["artist"];
+
+    foreach ($songs as $song) {
+        if (str_contains($song["title"], $title) && str_contains($song['artist'], $artist)) {
+            return $song;
+        }
+    }
 }
 
 function array_sort_by_column(&$array, $column) {
@@ -84,6 +108,7 @@ function array_sort_by_column(&$array, $column) {
     // to matched the indexes of the first array $reference_array
     array_multisort($reference_array, $array);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -124,7 +149,8 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>

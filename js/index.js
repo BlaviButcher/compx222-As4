@@ -1,58 +1,59 @@
+// Gets the last search.
 let lastSearch = document.getElementById("search-box").innerText;
 
 // Listens for a click event on the go button for the search bar.
-document
-  .getElementById("search-go-button")
-  .addEventListener("click", () => {
-    // // Get the contents of the search box.
-    let search = document.getElementById("search-box").innerText;
-    let order = document.getElementById("dropdownOrder").innerText;
+document.getElementById("search-go-button").addEventListener("click", () => {
+  // Get the contents from the search box and the sort box.
+  let search = document.getElementById("search-box").innerText;
+  let sort = document.getElementById("dropdownOrder").innerText;
 
-    let url = new URL(window.location.href);
+  // Append the search and sort as parameters to the current url.
+  let url = new URL(cleanURL()); //let url = new URL(window.location.href); <---------- I've replaced the current line of code. Please check to see if this works.
+  url.searchParams.set("search", search);
+  url.searchParams.set("order", sort);
+  window.location.href = url;
+});
 
-    url.searchParams.set("search", search);
-    url.searchParams.set("order", order);
-    window.location.href = url;
-  });
-
-
-// Listens for a click event on each a song card and takes the user to the song's page.
+// Listens for a click event on each song card and takes the user to the appropriate song page upon click.
 for (let item of document.getElementsByClassName("grid-item")) {
   item.addEventListener("click", () => {
-    // Get the artist and song name of the selected card and put it into an array.
+    // Get the artist and song name of the selected card.
     let artistName = item.children[1].children[1].children[1].textContent;
     let songName = item.children[1].children[0].children[1].textContent;
 
-    // TODO: tokenize to make relative
-    let url = new URL("http://localhost/compx222-As4/php/detail.php");
-
+    // Generate a new URL from the current by removing its parameters using tokenisation.
+    let url = new URL(cleanURL() + "php/detail.php/");
+    alert(cleanURL() + "php/detail.php/");
+    // Append the artist and song name to the params of the new URL.
     url.searchParams.append("title", songName);
     url.searchParams.append("artist", artistName);
 
+    // Change the current URL to the new URL.
     window.location.href = url;
-
   });
 }
 
-
-// Stop the ability to create a new line in search box
-document.getElementById("search-box").addEventListener('keypress', (event) => {
+// Prevents new lines from being able to be created in the search box.
+document.getElementById("search-box").addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
-      event.preventDefault();
+    event.preventDefault();
   }
 });
 
-// if searchbox is empty hide cursors. Removes glitch
-document.getElementById("search-box").addEventListener("input", function(event) {
-  event.target.style.caretColor = event.target.textContent == "" ? 'transparent' : 'black';
-});
+// If the search box is empty, hide the cursor. (Patches the pesky Mozzilla cursor rendering glitch.)
+document
+  .getElementById("search-box")
+  .addEventListener("input", function (event) {
+    event.target.style.caretColor =
+      event.target.textContent == "" ? "transparent" : "black";
+  });
 
 // Handles the visual change of the dropdown on click
-document.querySelectorAll("div.dropdown-menu a").forEach(dropdownItem => {
+document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
   dropdownItem.addEventListener("click", (event) => {
-      let dropdownOrderMain = document.getElementById("dropdownOrder");
-      // needs concat empty for style purposes - thanks bootstrap
-      dropdownOrderMain.innerText = event.target.innerText + " ";
+    let dropdownOrderMain = document.getElementById("dropdownOrder");
+    // needs concat empty for style purposes - thanks bootstrap
+    dropdownOrderMain.innerText = event.target.innerText + " ";
 
     // // // Get the contents of the search box.
     let order = document.getElementById("dropdownOrder").innerText;
@@ -65,4 +66,13 @@ document.querySelectorAll("div.dropdown-menu a").forEach(dropdownItem => {
   });
 });
 
-
+// Returns the current URL in string format without any parameters at the end.
+function cleanURL() {
+  let urlArray = location.href.split("/");
+  let urlString = "";
+  for (let i = 0; i < urlArray.length - 1; i++) {
+    urlString += urlArray[i];
+    urlString += "/";
+  }
+  return urlString;
+}
