@@ -5,9 +5,9 @@ ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
+include("php/helper.php");
 
-
-// Check fot a song list. If it exists, load it. If not, log an error message.
+// Load song list if exists, else error
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
@@ -19,38 +19,22 @@ if (isset($_GET["search"])) {
 }
 
 
-function xmlSongsToAsscArray($song_list) {
-
-    $songs = array();
-
-    foreach ($song_list->children() as $song) {
-        $songs[] = array(
-            'title' => (string)$song->title,
-            'artist' => (string)$song->artist,
-            'album' => (string)$song->album,
-            'year' => (int)$song->year,
-            'genre' => (string)$song->genre,
-            'art' => (string)$song->art
-        );
-    }
-
-    return $songs;
-}
-
-// 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
-// 
+// Set order if it is set, trim and lower, else use default - title
 $searchOrder = "title";
 if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
 array_sort_by_column($songs, $searchOrder);
 
-
-// Takes in a list of songs. Creates a new array and adds any song
-// that has a match in any enumarable column
-// Returns updated array
+/**
+ * Takes in a list of songs. Creates a new array and adds any song
+ * that has a match in any enumarable column
+ *   
+ * @param array $array multidemensional associative array containing songs
+ * @return array
+ */
 function song_array_search($array) {
 
     // new array to be pushed upon and returned
@@ -59,7 +43,7 @@ function song_array_search($array) {
     $columnSearch = array("title", "artist", "album");
 
     global $isSearching;
-    // if something was searched
+    // if user searched for something
     if ($isSearching) {
         $content = trim($_GET["search"]);
         // get each song
@@ -67,7 +51,7 @@ function song_array_search($array) {
 
             // search each column for a match
             foreach ($columnSearch as $column) {
-                if (str_contains(strtolower($song[$column]), strtolower($content))) {
+                if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
                     // push if match
                     array_push($newSongList, $song);
                     break;
@@ -80,7 +64,13 @@ function song_array_search($array) {
     } else return $array;
 }
 
-// 
+/**
+ * Fills a referenceArray with content from songs with only one column - the one given.
+ * It's then sorted, then sorts the big song array using the referenceArray as reference
+ * 
+ * @param array array filled with songs
+ * @param string column to sort by
+ */
 function array_sort_by_column(&$array, $column) {
     $reference_array = array();
 
@@ -132,8 +122,7 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
@@ -179,6 +168,7 @@ function array_sort_by_column(&$array, $column) {
 
     </div>
 
+    <!-- Down here as that is what bootstrap requests -->
     <!-- These are only used for the toggle dropdown -->
     <!-- Popper JS -->
     <script src="js/bootstrap/pooper.min.js"></script>
