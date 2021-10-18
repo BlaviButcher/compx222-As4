@@ -1,43 +1,32 @@
 <?php
+
+// Setup error reporting and include helper.php for some handy functions.
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
-
 include("php/helper.php");
 
+// Check fot a song list. If it exists, load it. If not, log an error message.
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
 
-?>
-
-<?php
-
+// Check and record if the page is currently searching by observing the get request.
 $isSearching = false;
+if (isset($_GET["search"])) {
+    $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
+}
 
-?>
-
-<?php
-
-if (isset($_GET["search"]))
-    $isSearching = ($_GET["search"] == "\n" || $_GET["search"] == "") ? false : true;
-
-
-?>
-
-<?php
-
+// 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
+// 
 $searchOrder = "title";
 if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
 array_sort_by_column($songs, $searchOrder);
 
-?>
-
-<?php
 
 // Takes in a list of songs. Creates a new array and adds any song
 // that has a match in any enumarable column
@@ -71,6 +60,7 @@ function song_array_search($array) {
     } else return $array;
 }
 
+// 
 function array_sort_by_column(&$array, $column) {
     $reference_array = array();
 
@@ -101,8 +91,6 @@ function array_sort_by_column(&$array, $column) {
 </head>
 
 <body>
-
-
     <header>
         <div id="left"></div>
         <div id="middle">
@@ -124,7 +112,8 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
