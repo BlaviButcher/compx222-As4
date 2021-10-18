@@ -24,7 +24,7 @@ for (let item of document.getElementsByClassName("grid-item")) {
     let songName = item.children[1].children[0].children[1].textContent;
 
     // TODO: tokenize to make relative
-    let url = new URL("http://localhost/compx222-As4/php/detail.php");
+    let url = new URL(window.location.href + "/php/detail.php");
 
     url.searchParams.append("title", songName);
     url.searchParams.append("artist", artistName);

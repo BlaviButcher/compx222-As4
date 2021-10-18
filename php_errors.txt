@@ -5,3 +5,9 @@
 [18-Oct-2021 02:24:51 Europe/Berlin] PHP Warning:  Undefined array key "artist " in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
 [18-Oct-2021 02:24:51 Europe/Berlin] PHP Warning:  Undefined array key "artist " in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
 [18-Oct-2021 02:24:51 Europe/Berlin] PHP Warning:  Undefined array key "artist " in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
+[18-Oct-2021 04:56:59 Europe/Berlin] PHP Warning:  Undefined array key "title /php/detail.php" in E:\Blavi\workSchool\Code\php\xampp\htdocs\compx222-As4\index.php on line 79
