@@ -96,7 +96,6 @@ function array_sort_by_column(&$array, $column) {
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <script src="js/index.js" defer></script>
-    <script src="js/dropdown.js" defer></script>
 
     <title>Document</title>
 </head>
