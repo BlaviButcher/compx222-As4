@@ -3,12 +3,34 @@ ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
-include("php/helper.php");
+
 
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
 
+?>
+
+
+<?php
+
+function xmlSongsToAsscArray($song_list) {
+
+    $songs = array();
+
+    foreach ($song_list->children() as $song) {
+        $songs[] = array(
+            'title' => (string)$song->title,
+            'artist' => (string)$song->artist,
+            'album' => (string)$song->album,
+            'year' => (int)$song->year,
+            'genre' => (string)$song->genre,
+            'art' => (string)$song->art
+        );
+    }
+
+    return $songs;
+}
 ?>
 
 <?php
@@ -58,7 +80,8 @@ function song_array_search($array) {
 
             // search each column for a match
             foreach ($columnSearch as $column) {
-                if (str_contains(strtolower($song[$column]), strtolower($content))) {
+                // Can return non boolean values that do not evaluate to false, hence !==
+                if ((strpos(strtolower($song[$column]), strtolower($content))) !== false) {
                     // push if match
                     array_push($newSongList, $song);
                     break;

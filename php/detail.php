@@ -21,7 +21,7 @@ function getSongContent($songs) {
     $artist = $_GET["artist"];
 
     foreach ($songs as $song) {
-        if (str_contains($song["title"], $title) && str_contains($song['artist'], $artist)) {
+        if ((strpos($song["title"], $title)) !== false && (strpos($song['artist'], $artist)) !== false) {
             return $song;
         }
     }
