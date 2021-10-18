@@ -108,16 +108,15 @@ function array_sort_by_column(&$array, $column) {
         <div id="left"></div>
         <div id="middle">
             <div id="search-wrap">
-                <div id="search-icon">
-                    <img id="search-img" src="images/magnifying-glass.png" alt="">
-                </div>
                 <div id="search-container">
                     <div id="search-box" contenteditable>
                         <?php if ($isSearching) echo trim($_GET["search"]);
                         else echo "";
                         ?>
                     </div>
-                    <div id="search-go-button">GO</div>
+                    <div id="search-go-button">
+                        <img id="search-img" src="images/magnifying-glass.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
