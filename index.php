@@ -97,16 +97,19 @@ function array_sort_by_column(&$array, $column) {
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <script src="js/index.js" defer></script>
 
-    <title>Document</title>
+    <title>Music Database</title>
 </head>
 
 <body>
     <header>
+        <!-- Buffer for symmetric spacing -->
         <div id="left"></div>
+        <!-- Holds everything related to search -->
         <div id="middle">
             <div id="search-wrap">
                 <div id="search-container">
                     <div id="search-box" contenteditable>
+                        <!-- If something was search update box to match -->
                         <?php if ($isSearching) echo trim($_GET["search"]);
                         else echo "";
                         ?>
@@ -143,15 +146,13 @@ function array_sort_by_column(&$array, $column) {
 
 
         <?php
+        // Draw songs to page in their individual cards
         foreach ($songs as $song) {
+            // Storing in varaible to prevent templating issues
             $title = $song['title'];
             $artist = $song['artist'];
             $album = $song['album'];
-            $year = $song['year'];
-            $genre = $song['genre'];
-            $art = $song['art'];
 
-            // circumvents error in templating
             echo "<div class='grid-item'>
             <div class='img-wrap'>
                 <img src=$art alt=''>
@@ -164,8 +165,6 @@ function array_sort_by_column(&$array, $column) {
         </div>";
         }
         ?>
-
-
     </div>
 
     <!-- Down here as that is what bootstrap requests -->
