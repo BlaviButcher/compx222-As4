@@ -4,7 +4,8 @@
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
-include("php/helper.php");
+
+
 
 // Check fot a song list. If it exists, load it. If not, log an error message.
 if (file_exists('xml/song_list.xml')) {
@@ -15,6 +16,25 @@ if (file_exists('xml/song_list.xml')) {
 $isSearching = false;
 if (isset($_GET["search"])) {
     $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
+}
+
+
+function xmlSongsToAsscArray($song_list) {
+
+    $songs = array();
+
+    foreach ($song_list->children() as $song) {
+        $songs[] = array(
+            'title' => (string)$song->title,
+            'artist' => (string)$song->artist,
+            'album' => (string)$song->album,
+            'year' => (int)$song->year,
+            'genre' => (string)$song->genre,
+            'art' => (string)$song->art
+        );
+    }
+
+    return $songs;
 }
 
 // 
