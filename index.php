@@ -1,13 +1,11 @@
 <?php
 
-// Setup error reporting and include helper.php for some handy functions.
+// Setup error reporting and include helper.php for some handy functions
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
-
-
-// Check fot a song list. If it exists, load it. If not, log an error message.
+// Check for a song list. If it exists, load it. If not, log an error message
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
@@ -18,7 +16,7 @@ if (isset($_GET["search"])) {
     $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
 }
 
-
+// 
 function xmlSongsToAsscArray($song_list) {
 
     $songs = array();
@@ -47,37 +45,35 @@ if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
 array_sort_by_column($songs, $searchOrder);
 
-
 // Takes in a list of songs. Creates a new array and adds any song
 // that has a match in any enumarable column
 // Returns updated array
 function song_array_search($array) {
 
-    // new array to be pushed upon and returned
+    // New array to be pushed upon and returned
     $newSongList = array();
-    // enumarable columns to search
+    // Enumarable columns to search
     $columnSearch = array("title", "artist", "album");
 
+    // If something was searched
     global $isSearching;
-    // if something was searched
     if ($isSearching) {
         $content = trim($_GET["search"]);
-        // get each song
+        // Get each song
         foreach ($array as $song) {
-
-            // search each column for a match
+            // Search each column for a match
             foreach ($columnSearch as $column) {
+                // If match, append the song to the new song list
                 if (str_contains(strtolower($song[$column]), strtolower($content))) {
-                    // push if match
                     array_push($newSongList, $song);
                     break;
                 }
             }
         }
         return $newSongList;
-
-        // return array untouched 
-    } else return $array;
+    }
+    // If nothing was searched, then return the song list, untouched
+    return $array;
 }
 
 // 
@@ -132,7 +128,7 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder"
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
@@ -150,9 +146,6 @@ function array_sort_by_column(&$array, $column) {
     </header>
 
     <div class="grid-container">
-
-
-
         <?php
         foreach ($songs as $song) {
             $title = $song['title'];
@@ -175,8 +168,6 @@ function array_sort_by_column(&$array, $column) {
         </div>";
         }
         ?>
-
-
     </div>
 
     <!-- These are only used for the toggle dropdown -->
