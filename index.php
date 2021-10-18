@@ -146,13 +146,16 @@ function array_sort_by_column(&$array, $column) {
 
 
         <?php
-        // Draw songs to page in their individual cards
+        // Draw songs to page in each individual card
         foreach ($songs as $song) {
             // Storing in varaible to prevent templating issues
             $title = $song['title'];
             $artist = $song['artist'];
             $album = $song['album'];
+            $art = $song['art'];
 
+
+            // circumvents error in templating
             echo "<div class='grid-item'>
             <div class='img-wrap'>
                 <img src=$art alt=''>
@@ -165,6 +168,8 @@ function array_sort_by_column(&$array, $column) {
         </div>";
         }
         ?>
+
+
     </div>
 
     <!-- Down here as that is what bootstrap requests -->
