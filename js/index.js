@@ -1,7 +1,7 @@
-// Gets the last search.
 let lastSearch = document.getElementById("search-box").innerText;
 
-// Listens for a click event on the go button for the search bar.
+// On go click get content of seach-box and dropdownOrder, then attatching
+// these to the current url in varaibles
 document.getElementById("search-go-button").addEventListener("click", () => {
   // // Get the contents of the search box.
   let search = document.getElementById("search-box").innerText;
@@ -14,10 +14,11 @@ document.getElementById("search-go-button").addEventListener("click", () => {
   window.location.href = url;
 });
 
-// Listens for a click event on each song card and takes the user to the appropriate song page upon click.
+// Add click event for all grid items 
 for (let item of document.getElementsByClassName("grid-item")) {
+  // Get artist and song name of selected card and create a get request using these
+  // variables going to php/detail.php
   item.addEventListener("click", () => {
-    // Get the artist and song name of the selected card.
     let artistName = item.children[1].children[1].children[1].textContent;
     let songName = item.children[1].children[0].children[1].textContent;
 
@@ -31,9 +32,9 @@ for (let item of document.getElementsByClassName("grid-item")) {
     urlString += "php/detail.php";
     let url = new URL(urlString);
 
-    // Append the artist and song name to the params of the new URL.
-    url.searchParams.append("title", songName);
-    url.searchParams.append("artist", artistName);
+    // Append the artist and song name to the params of the new URL. 
+    url.searchParams.set("title", songName);
+    url.searchParams.set("artist", artistName);
 
     // Change the current URL to the new URL.
     window.location.href = url;
@@ -55,14 +56,16 @@ document
       event.target.textContent == "" ? "transparent" : "black";
   });
 
-// Handles the visual change of the dropdown on click
+// Add click event for each dropdown option
 document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
+  // updates dropdown face appeareance and creates a new get request
+  // using the previous search and the newly selected order category
   dropdownItem.addEventListener("click", (event) => {
     let dropdownOrderMain = document.getElementById("dropdownOrder");
     // needs concat empty for style purposes - thanks bootstrap
     dropdownOrderMain.innerText = event.target.innerText + " ";
 
-    // // // Get the contents of the search box.
+    // Get the contents of the search box.
     let order = document.getElementById("dropdownOrder").innerText;
 
     let url = new URL(window.location.href);
