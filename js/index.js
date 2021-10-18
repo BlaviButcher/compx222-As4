@@ -1,4 +1,4 @@
-
+let lastSearch = document.getElementById("search-box").innerText;
 
 // Listens for a click event on the go button for the search bar.
 document
@@ -53,6 +53,15 @@ document.querySelectorAll("div.dropdown-menu a").forEach(dropdownItem => {
       let dropdownOrderMain = document.getElementById("dropdownOrder");
       // needs concat empty for style purposes - thanks bootstrap
       dropdownOrderMain.innerText = event.target.innerText + " ";
+
+    // // // Get the contents of the search box.
+    let order = document.getElementById("dropdownOrder").innerText;
+
+    let url = new URL(window.location.href);
+
+    url.searchParams.set("search", lastSearch);
+    url.searchParams.set("order", order);
+    window.location.href = url;
   });
 });
 
