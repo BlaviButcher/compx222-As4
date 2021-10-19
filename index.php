@@ -49,7 +49,7 @@ function song_array_search($songList) {
         foreach ($songList as $song) {
             // Search each column for a match
             foreach ($columnSearch as $column) {
-                if (!strpos(strtolower($song[$column]), strtolower($content))) {
+                if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
                     // Push if match
                     array_push($newSongList, $song);
                     break;
@@ -123,8 +123,7 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
