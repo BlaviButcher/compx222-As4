@@ -49,7 +49,7 @@ function song_array_search($songList) {
         foreach ($songList as $song) {
             // Search each column for a match
             foreach ($columnSearch as $column) {
-                if (!strpos(strtolower($song[$column]), strtolower($content))) {
+                if (strpos(strtolower($song[$column]), strtolower($content))!== false) {
                     // Push if match
                     array_push($newSongList, $song);
                     break;
