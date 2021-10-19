@@ -5,7 +5,9 @@ ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
-// Check for a song list. If it exists, load it. If not, log an error message
+include("php/helper.php");
+
+// Load song list if exists, else error
 if (file_exists('xml/song_list.xml')) {
     $song_list = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
@@ -16,38 +18,22 @@ if (isset($_GET["search"])) {
     $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
 }
 
-// 
-function xmlSongsToAsscArray($song_list) {
-
-    $songs = array();
-
-    foreach ($song_list->children() as $song) {
-        $songs[] = array(
-            'title' => (string)$song->title,
-            'artist' => (string)$song->artist,
-            'album' => (string)$song->album,
-            'year' => (int)$song->year,
-            'genre' => (string)$song->genre,
-            'art' => (string)$song->art
-        );
-    }
-
-    return $songs;
-}
-
-// 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
-// 
+// Set order if it is set, trim and lower, else use default - title
 $searchOrder = "title";
 if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
 array_sort_by_column($songs, $searchOrder);
 
-// Takes in a list of songs. Creates a new array and adds any song
-// that has a match in any enumarable column
-// Returns updated array
+/**
+ * Takes in a list of songs. Creates a new array and adds any song
+ * that has a match in any enumarable column
+ *   
+ * @param array $array multidemensional associative array containing songs
+ * @return array
+ */
 function song_array_search($array) {
 
     // New array to be pushed upon and returned
@@ -57,14 +43,15 @@ function song_array_search($array) {
 
     // If something was searched
     global $isSearching;
+    // if user searched for something
     if ($isSearching) {
         $content = trim($_GET["search"]);
         // Get each song
         foreach ($array as $song) {
             // Search each column for a match
             foreach ($columnSearch as $column) {
-                // If match, append the song to the new song list
-                if (str_contains(strtolower($song[$column]), strtolower($content))) {
+                if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
+                    // push if match
                     array_push($newSongList, $song);
                     break;
                 }
@@ -76,7 +63,13 @@ function song_array_search($array) {
     return $array;
 }
 
-// 
+/**
+ * Fills a referenceArray with content from songs with only one column - the one given.
+ * It's then sorted, then sorts the big song array using the referenceArray as reference
+ * 
+ * @param array array filled with songs
+ * @param string column to sort by
+ */
 function array_sort_by_column(&$array, $column) {
     $reference_array = array();
 
@@ -103,16 +96,19 @@ function array_sort_by_column(&$array, $column) {
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <script src="js/index.js" defer></script>
 
-    <title>Document</title>
+    <title>Music Database</title>
 </head>
 
 <body>
     <header>
+        <!-- Buffer for symmetric spacing -->
         <div id="left"></div>
+        <!-- Holds everything related to search -->
         <div id="middle">
             <div id="search-wrap">
                 <div id="search-container">
                     <div id="search-box" contenteditable>
+                        <!-- If something was search update box to match -->
                         <?php if ($isSearching) echo trim($_GET["search"]);
                         else echo "";
                         ?>
@@ -128,8 +124,7 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
@@ -147,13 +142,14 @@ function array_sort_by_column(&$array, $column) {
 
     <div class="grid-container">
         <?php
+        // Draw songs to page in each individual card
         foreach ($songs as $song) {
+            // Storing in varaible to prevent templating issues
             $title = $song['title'];
             $artist = $song['artist'];
             $album = $song['album'];
-            $year = $song['year'];
-            $genre = $song['genre'];
             $art = $song['art'];
+
 
             // circumvents error in templating
             echo "<div class='grid-item'>
@@ -170,6 +166,7 @@ function array_sort_by_column(&$array, $column) {
         ?>
     </div>
 
+    <!-- Down here as that is what bootstrap requests -->
     <!-- These are only used for the toggle dropdown -->
     <!-- Popper JS -->
     <script src="js/bootstrap/pooper.min.js"></script>

@@ -57,20 +57,7 @@ $art = str_replace('"', "", ("../" . $song["art"]));
 
 
 <body>
-    <div class="muzieknootjes">
-        <div class="noot-1">
-            &#9835; &#9833;
-        </div>
-        <div class="noot-2">
-            &#9833;
-        </div>
-        <div class="noot-3">
-            &#9839; &#9834;
-        </div>
-        <div class="noot-4">
-            &#9834;
-        </div>
-    </div>
+    <?php include("../html/notes.html") ?>
     <div id="card">
         <div class='img-wrap'>
             <img alt='' src=<?php echo $art ?>>
@@ -83,20 +70,7 @@ $art = str_replace('"', "", ("../" . $song["art"]));
             <div class='field-5'><strong>Genre: </strong><span><?php echo $song["genre"] ?></span></div>
         </div>
     </div>
-    <div class="muzieknootjes">
-        <div class="noot-1">
-            &#9835; &#9833;
-        </div>
-        <div class="noot-2">
-            &#9833;
-        </div>
-        <div class="noot-3">
-            &#9839; &#9834;
-        </div>
-        <div class="noot-4">
-            &#9834;
-        </div>
-    </div>
+    <?php include("../html/notes.html") ?>
 </body>
 
 </html>
