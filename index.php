@@ -1,6 +1,6 @@
 <?php
 
-// Setup error reporting and include helper.php for some handy functions
+// Setup error reporting
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
@@ -123,7 +123,8 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
@@ -148,7 +149,6 @@ function array_sort_by_column(&$array, $column) {
             $artist = $song['artist'];
             $album = $song['album'];
             $art = $song['art'];
-
 
             // circumvents error in templating
             echo "<div class='grid-item'>
