@@ -14,7 +14,7 @@ document.getElementById("search-go-button").addEventListener("click", () => {
   window.location.href = url;
 });
 
-// Click event for grid items (song cards)
+// Adds click events for grid items (song cards)
 for (let item of document.getElementsByClassName("grid-item")) {
   // Get artist and song name of selected card and create a get request using these
   // variables going to php/detail.php
