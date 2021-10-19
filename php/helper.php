@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * 
+ */
 function xmlSongsToAsscArray($song_list) {
 
     $songs = array();

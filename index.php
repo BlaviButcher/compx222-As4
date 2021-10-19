@@ -34,24 +34,23 @@ array_sort_by_column($songs, $searchOrder);
  * @param array $array multidemensional associative array containing songs
  * @return array
  */
-function song_array_search($array) {
+function song_array_search($songList) {
 
     // New array to be pushed upon and returned
     $newSongList = array();
     // Enumarable columns to search
     $columnSearch = array("title", "artist", "album");
 
-    // If something was searched
+    // If the user searched for something
     global $isSearching;
-    // if user searched for something
     if ($isSearching) {
         $content = trim($_GET["search"]);
         // Get each song
-        foreach ($array as $song) {
+        foreach ($songList as $song) {
             // Search each column for a match
             foreach ($columnSearch as $column) {
-                if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
-                    // push if match
+                if (!strpos(strtolower($song[$column]), strtolower($content))) {
+                    // Push if match
                     array_push($newSongList, $song);
                     break;
                 }
@@ -60,7 +59,7 @@ function song_array_search($array) {
         return $newSongList;
     }
     // If nothing was searched, then return the song list, untouched
-    return $array;
+    return $songList;
 }
 
 /**
@@ -124,7 +123,8 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
