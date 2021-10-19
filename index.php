@@ -1,6 +1,6 @@
 <?php
 
-// Setup error reporting and include helper.php for some handy functions.
+// Setup error reporting and include helper.php for some handy functions
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
@@ -17,7 +17,6 @@ $isSearching = false;
 if (isset($_GET["search"])) {
     $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
 }
-
 
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
@@ -37,19 +36,19 @@ array_sort_by_column($songs, $searchOrder);
  */
 function song_array_search($array) {
 
-    // new array to be pushed upon and returned
+    // New array to be pushed upon and returned
     $newSongList = array();
-    // enumarable columns to search
+    // Enumarable columns to search
     $columnSearch = array("title", "artist", "album");
 
+    // If something was searched
     global $isSearching;
     // if user searched for something
     if ($isSearching) {
         $content = trim($_GET["search"]);
-        // get each song
+        // Get each song
         foreach ($array as $song) {
-
-            // search each column for a match
+            // Search each column for a match
             foreach ($columnSearch as $column) {
                 if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
                     // push if match
@@ -59,9 +58,9 @@ function song_array_search($array) {
             }
         }
         return $newSongList;
-
-        // return array untouched 
-    } else return $array;
+    }
+    // If nothing was searched, then return the song list, untouched
+    return $array;
 }
 
 /**
@@ -125,7 +124,7 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownOrder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php if (isset($_GET["order"])) echo $_GET["order"];
                         else echo "Title"; ?>
                     </button>
@@ -142,9 +141,6 @@ function array_sort_by_column(&$array, $column) {
     </header>
 
     <div class="grid-container">
-
-
-
         <?php
         // Draw songs to page in each individual card
         foreach ($songs as $song) {
@@ -168,8 +164,6 @@ function array_sort_by_column(&$array, $column) {
         </div>";
         }
         ?>
-
-
     </div>
 
     <!-- Down here as that is what bootstrap requests -->
