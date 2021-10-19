@@ -1,25 +1,28 @@
 <?php
+
+// Setup error reporting
 ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
+// Include helper.php for some handy functions
 include("helper.php");
 
+// Load song list if exists, else error
 if (file_exists('../xml/song_list.xml')) {
     $song_list = simplexml_load_file('../xml/song_list.xml');
 } else exit('Failed to open ../xml/song_list.xml');
 
+// Get the content of the current song from the GET and get that song from $song_list
 $songs = xmlSongsToAsscArray($song_list);
 $song = getSongContent($songs);
 
-?>
-
-<?php
-
+/**
+ * Gets the song from the song list, based on its title and artist
+ */
 function getSongContent($songs) {
     $title = $_GET["title"];
     $artist = $_GET["artist"];
-
     foreach ($songs as $song) {
         if (strpos($song["title"], $title) !== false && strpos($song['artist'], $artist) !== false) {
             return $song;
@@ -50,11 +53,7 @@ $year = $song["year"];
 // doing this because php is satan and decides to add " (quotes) on concat
 // ie "../""images/xnay_on_the_hombre""
 $art = str_replace('"', "", ("../" . $song["art"]));
-
-
-
 ?>
-
 
 <body>
     <?php include("../html/notes.html") ?>
