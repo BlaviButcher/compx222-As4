@@ -1,31 +1,47 @@
+/* Variables */
+:root {
+  --search-box-height: 50px;
+  --body-background-color: #272838;
+  --off-background-color: #ffffff;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "arima-koshi";
+  src: url(../fonts/arima-koshi/ArimaKoshi-Medium.otf);
+}
+
+/* Body */
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #272838;
-  color: white;
+  background-color: var(--body-background-color);
+  font-family: "arima-koshi";
 }
 
+/* Song card */
 #card {
   display: flex;
   flex-direction: column;
   width: 45%;
   min-height: 80%;
   height: auto;
-  background-color: white;
+  background-color: var(--off-background-color);
   border-radius: 30px;
   padding: 10px;
-  color: black;
   margin: 20px;
 }
 
+/* Song art */
 img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
 }
 
+/* Song info wrap */
 .info-wrap {
   flex: 1;
   display: flex;
@@ -35,16 +51,17 @@ img {
   font-size: 1.2rem;
 }
 
+/* Song info */
 .info-wrap div {
   margin-bottom: 10px;
 }
 
+/* First song info. Used to align text vertically */
 .info-wrap div:first-child {
   margin-top: 10px;
 }
 
-/****/
-
+/* Div containing musical notes for the background */
 .musical-notes {
   display: block;
   margin: auto;
@@ -52,9 +69,10 @@ img {
   width: 50%;
   min-width: 300px;
   height: 200px;
-  border: 0px solid #000;
+  color: var(--off-background-color);
 }
 
+/* Musical notes for the background */
 .note-1,
 .note-2,
 .note-3,
@@ -89,6 +107,7 @@ img {
   animation-delay: 2s;
 }
 
+/* Musical note animation */
 @keyframes notes {
   0% {
     transform: scale(1) translate(0, 0);
