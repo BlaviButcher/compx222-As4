@@ -106,18 +106,16 @@ function array_sort_by_column(&$array, $column) {
         <div id="header-margin-left"></div>
 
         <!-- Center of the header. Holds everything related to search -->
-        <div id="middle">
-            <div id="search-wrap">
-                <div id="search-container">
-                    <div id="search-box" contenteditable>
-                        <!-- If something was search update box to match -->
-                        <?php if ($isSearching) echo trim($_GET["search"]);
+        <div id="search-wrap">
+            <div id="search-container">
+                <div id="search-box" contenteditable>
+                    <!-- If something was searched, update the search box to match -->
+                    <?php if ($isSearching) echo trim($_GET["search"]);
                         else echo "";
                         ?>
-                    </div>
-                    <div id="search-go-button">
-                        <img id="search-img" src="images/magnifying-glass.png" alt="">
-                    </div>
+                </div>
+                <div id="search-go-button">
+                    <img id="search-img" src="images/magnifying-glass.png" alt="">
                 </div>
             </div>
         </div>
