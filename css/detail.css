@@ -3,6 +3,7 @@
   --search-box-height: 50px;
   --body-background-color: #272838;
   --off-background-color: #ffffff;
+  --font: "arima-koshi", sans-serif;
 }
 
 /* Fonts */
@@ -18,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--body-background-color);
-  font-family: "arima-koshi";
+  font-family: var(--font);
 }
 
 /* Song card */
