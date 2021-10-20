@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ * Converts the contents of an XML file to an array of song objects
  */
 function xmlSongsToAsscArray($song_list) {
 

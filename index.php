@@ -5,6 +5,7 @@ ini_set("error_reporting", E_ALL);
 ini_set("log_errors", "1");
 ini_set("error_log", "php_errors.txt");
 
+// Include helper.php for some handy functions
 include("php/helper.php");
 
 // Load song list if exists, else error
@@ -18,10 +19,11 @@ if (isset($_GET["search"])) {
     $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
 }
 
+// Get the songs from $song_list and filter them based on the current search
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
-// Set order if it is set, trim and lower, else use default - title
+// Set order. If it is set, trim and lower, else use default - title
 $searchOrder = "title";
 if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
 
