@@ -3,6 +3,7 @@
   --search-box-height: 50px;
   --body-background-color: #272838;
   --off-background-color: #ffffff;
+  --font: "arima-koshi", sans-serif;
 }
 
 /* Fonts */
@@ -17,14 +18,14 @@ body {
   flex-direction: column;
   background-color: var(--body-background-color) !important;
   padding-bottom: 30px;
-  font-family: "arima-koshi";
+  font-family: var(--font);
 }
 
 /* Header*/
 header {
   display: flex;
   margin: 30px 30px 60px 30px;
-  font-family: "arima-koshi";
+  font-family: var(--font);
 }
 
 /* The space to the left of the search area. Used as a buffer */
@@ -88,7 +89,7 @@ header {
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 400px);
   justify-content: space-around;
-  font-family: "arima-koshi";
+  font-family: var(--font);
 }
 
 /* Song card */
