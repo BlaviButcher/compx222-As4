@@ -1,9 +1,11 @@
+/* Variables */
 :root {
   --search-box-height: 50px;
   --body-background-color: #272838;
-  --off-background-color: #f5f1ed;
+  --off-background-color: #ffffff;
 }
 
+/* Body*/
 body {
   display: flex;
   flex-direction: column;
@@ -11,57 +13,38 @@ body {
   padding-bottom: 30px;
 }
 
+/* Header*/
 header {
   display: flex;
-  margin: 30px 30px 0 30px;
+  margin: 30px 30px 30px 30px;
 }
 
-#left,
-#right {
+/* The space to the left of the search area. Used as a buffer */
+#header-margin-left {
   flex: 1;
 }
 
-#middle {
-  flex: 2;
-}
-
-#middle {
+/* The space to the right of the search area. Contains the sort box */
+#header-margin-right {
   display: flex;
-  justify-content: center;
-}
-
-#right {
-  display: flex;
+  flex: 1;
   justify-content: flex-end;
 }
 
-#search-wrap {
-  width: 100%;
-  display: flex;
-  min-height: 6rem;
-}
-
+/* Search container*/
 #search-container {
+  display: flex;
+  flex: 2;
   height: 100px;
-}
-
-#search-icon {
-  max-height: var(--search-box-height);
-  max-width: var(--search-box-height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#search-container {
-  display: flex;
+  min-height: 3rem;
+  width: 100%;
   border: 2px solid var(--off-background-color);
+  border-radius: 20px;
   color: var(--off-background-color);
   height: var(--search-box-height);
-  width: 100%;
-  border-radius: 20px;
 }
 
+/* Search box */
 #search-box {
   flex: 1;
   display: flex;
@@ -75,6 +58,7 @@ header {
   padding-left: 60px;
 }
 
+/* Go button */
 #search-go-button {
   display: flex;
   flex-direction: column;
@@ -83,12 +67,14 @@ header {
   border-left: 2px solid var(--off-background-color);
 }
 
-#search-img {
+/* Go button image */
+#search-go-img {
   width: 80%;
   height: 80%;
   margin-left: 5px;
 }
 
+/* comment TODO */
 .grid-container {
   display: grid;
   grid-gap: 50px;
@@ -96,6 +82,7 @@ header {
   justify-content: space-around;
 }
 
+/* comment TODO */
 .grid-item {
   display: flex;
   flex-direction: column;
@@ -105,16 +92,19 @@ header {
   padding: 10px 10px;
 }
 
+/* comment TODO */
 .img-wrap {
   flex: 2;
 }
 
+/* comment TODO */
 .img-wrap img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
 }
 
+/* comment TODO */
 .info-wrap {
   flex: 1;
   font-size: 1.1rem;
@@ -124,6 +114,7 @@ header {
   text-align: center;
 }
 
+/* comment TODO */
 .dropdown button {
   background-color: var(--off-background-color);
   color: black;
@@ -133,10 +124,12 @@ header {
   margin-right: 40px;
 }
 
+/* comment TODO */
 .selectedSort {
   background-color: blanchedalmond;
 }
 
+/* comment TODO */
 .dropdown-toggle:active,
 .open .dropdown-toggle {
   background: #fff !important;
