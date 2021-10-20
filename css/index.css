@@ -16,7 +16,7 @@ body {
 /* Header*/
 header {
   display: flex;
-  margin: 30px 30px 30px 30px;
+  margin: 30px 30px 60px 30px;
 }
 
 /* The space to the left of the search area. Used as a buffer */
