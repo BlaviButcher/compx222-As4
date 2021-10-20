@@ -102,6 +102,7 @@ function array_sort_by_column(&$array, $column) {
 
 <body>
     <header>
+
         <!-- Left margin of the header (buffer for symmetric spacing) -->
         <div id="header-margin-left"></div>
 
@@ -121,7 +122,7 @@ function array_sort_by_column(&$array, $column) {
         <!-- Right margin of the header -->
         <div id="header-margin-right">
             <!-- Dropdown -->
-            <div class="dropdown-wrap">
+            <div class="dropdown-container">
                 <div class="dropdown open">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,6 +141,7 @@ function array_sort_by_column(&$array, $column) {
         </div>
     </header>
 
+    <!-- Grid of song cards -->
     <div class="grid-container">
         <?php
         // Draw songs to page in each individual card
@@ -150,7 +152,7 @@ function array_sort_by_column(&$array, $column) {
             $album = $song['album'];
             $art = $song['art'];
 
-            // circumvents error in templating
+            // Circumvents error in templating
             echo "<div class='grid-item'>
             <div class='img-wrap'>
                 <img src=$art alt=''>

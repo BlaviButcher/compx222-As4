@@ -5,18 +5,26 @@
   --off-background-color: #ffffff;
 }
 
+/* Fonts */
+@font-face {
+  font-family: "arima-koshi";
+  src: url(../fonts/arima-koshi/ArimaKoshi-Medium.otf);
+}
+
 /* Body*/
 body {
   display: flex;
   flex-direction: column;
   background-color: var(--body-background-color) !important;
   padding-bottom: 30px;
+  font-family: "arima-koshi";
 }
 
 /* Header*/
 header {
   display: flex;
-  margin: 30px 30px 30px 30px;
+  margin: 30px 30px 60px 30px;
+  font-family: "arima-koshi";
 }
 
 /* The space to the left of the search area. Used as a buffer */
@@ -39,7 +47,7 @@ header {
   min-height: 3rem;
   width: 100%;
   border: 2px solid var(--off-background-color);
-  border-radius: 20px;
+  border-radius: 10px;
   color: var(--off-background-color);
   height: var(--search-box-height);
 }
@@ -69,9 +77,9 @@ header {
 
 /* Go button image */
 #search-go-img {
-  width: 80%;
-  height: 80%;
-  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 /* comment TODO */
@@ -80,9 +88,10 @@ header {
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 400px);
   justify-content: space-around;
+  font-family: "arima-koshi";
 }
 
-/* comment TODO */
+/* Song card */
 .grid-item {
   display: flex;
   flex-direction: column;
@@ -92,19 +101,19 @@ header {
   padding: 10px 10px;
 }
 
-/* comment TODO */
+/* Song art wrap */
 .img-wrap {
   flex: 2;
 }
 
-/* comment TODO */
+/* Song art */
 .img-wrap img {
   height: 100%;
   width: 100%;
   border-radius: 20px;
 }
 
-/* comment TODO */
+/* Song information wrap */
 .info-wrap {
   flex: 1;
   font-size: 1.1rem;
@@ -114,24 +123,18 @@ header {
   text-align: center;
 }
 
-/* comment TODO */
+/* Sort button */
 .dropdown button {
   background-color: var(--off-background-color);
-  color: black;
   height: 50px;
   width: 150px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 40px;
 }
 
-/* comment TODO */
-.selectedSort {
-  background-color: blanchedalmond;
-}
-
-/* comment TODO */
+/* Sort options */
 .dropdown-toggle:active,
 .open .dropdown-toggle {
-  background: #fff !important;
-  color: #000 !important;
+  background: var(--off-background-color) !important;
+  color: var(--body-background-color) !important;
 }
