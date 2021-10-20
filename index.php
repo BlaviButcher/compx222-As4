@@ -102,9 +102,10 @@ function array_sort_by_column(&$array, $column) {
 
 <body>
     <header>
-        <!-- Buffer for symmetric spacing -->
-        <div id="left"></div>
-        <!-- Holds everything related to search -->
+        <!-- Left margin of the header (buffer for symmetric spacing) -->
+        <div id="header-margin-left"></div>
+
+        <!-- Center of the header. Holds everything related to search -->
         <div id="middle">
             <div id="search-wrap">
                 <div id="search-container">
@@ -121,7 +122,8 @@ function array_sort_by_column(&$array, $column) {
             </div>
         </div>
 
-        <div id="right">
+        <!-- Right margin of the header -->
+        <div id="header-margin-right">
             <!-- Dropdown -->
             <div class="dropdown-wrap">
                 <div class="dropdown open">
