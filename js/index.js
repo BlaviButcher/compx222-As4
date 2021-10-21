@@ -1,18 +1,38 @@
-let lastSearch = document.getElementById("search-box").innerText;
+// Declare variables
+let searchBox = document.getElementById("search-box"); // The search box
+let searchButton = document.getElementById("search-button"); // The button for the search box
+let dropdown = document.getElementById("dropdown"); // The dropdown box that determines what the song cards will be sorted by
+let lastSearch = document.getElementById("search-box").innerText; // The contents of the last search
 
-// On go click, gets content of seach-box and dropdown-sort, then attaches
-// these to the current URL in variables
-document.getElementById("search-go-button").addEventListener("click", () => {
+// Make the search box caret transparent
+searchBox.style.caretColor = "transparent";
+
+// On enter key-press in the search box, do a search
+searchBox.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    // Prevent a new line from being written in the search box
+    event.preventDefault();
+    search();
+  }
+});
+
+// On click of the search button, do a search
+searchButton.addEventListener("click", () => {
+  search();
+});
+
+// Gets content of seach-box and dropdown-sort, then attaches these to the current URL in variables
+function search() {
   // Get the contents of search-box and dropdown-sort.
-  let search = document.getElementById("search-box").innerText;
-  let sort = document.getElementById("dropdown-sort").innerText;
+  let search = searchBox.innerText;
+  let sort = dropdown.innerText;
 
   // Set the URL to a new URL with the previous variables attached to it
   let url = new URL(window.location.href);
   url.searchParams.set("search", search);
   url.searchParams.set("sort", sort);
   window.location.href = url;
-});
+}
 
 // Adds click events for grid items (song cards)
 for (let item of document.getElementsByClassName("grid-item")) {
@@ -41,34 +61,19 @@ for (let item of document.getElementsByClassName("grid-item")) {
   });
 }
 
-// Prevents new lines from being able to be created in the search box
-document.getElementById("search-box").addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
-    event.preventDefault();
-  }
-});
-
-// If the search box is empty, hide the cursor (patches the pesky Mozzilla cursor rendering glitch)
-document
-  .getElementById("search-box")
-  .addEventListener("input", function (event) {
-    event.target.style.caretColor = "transparent";
-  });
-
-// Click event for each dropdown option
+// Click event for each option in the dropdown
 document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
   // Updates dropdown face appeareance and creates a new get request
   // using the previous search and the newly selected sort category
   dropdownItem.addEventListener("click", (event) => {
-    let dropdownSortMain = document.getElementById("dropdown-sort");
+    // Get the contents of the selected dropdown item
+    let sort = event.target.innerText;
+
     // Needs concat empty for style purposes - thanks bootstrap
-    dropdownSortMain.innerText = event.target.innerText + " ";
+    dropdown.innerText = event.target.innerText + " ";
 
-    // Get the contents of dropdown-sort
-    let sort = document.getElementById("dropdown-sort").innerText;
-
+    // Add the selected sort as a variable for the URL
     let url = new URL(window.location.href);
-
     url.searchParams.set("search", lastSearch);
     url.searchParams.set("sort", sort);
     window.location.href = url;
