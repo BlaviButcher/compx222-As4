@@ -1,5 +1,6 @@
 // Declare variables
 let searchBox = document.getElementById("search-box"); // The search box
+let lastSearch = searchBox.innerText; // The last search made
 let searchButton = document.getElementById("search-button"); // The button for the search box
 let dropdown = document.getElementById("dropdown"); // The dropdown box that determines how song cards will be sorted
 let dropdownItems = document.querySelectorAll("div.dropdown-menu a"); // An array of items in the dropdown box
@@ -10,13 +11,15 @@ searchBox.addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     // Prevent a new line from being written in the search box
     event.preventDefault();
-    updateURL();
+
+    // Update the URL with the current contents of the search box
+    updateURL(searchBox.innerText);
   }
 });
 
-// On click of the search button, update the URL
+// On click of the search button, update the URL with the current contents of the search box
 searchButton.addEventListener("click", () => {
-  updateURL();
+  updateURL(searchBox.innerText);
 });
 
 // On click of a dropdown item, update the dropdown box text and update the URL
@@ -25,15 +28,15 @@ dropdownItems.forEach((dropdownItem) => {
     // Set the text of the dropdown to the selected sort
     dropdown.innerText = event.target.innerText;
 
-    // Update the URL
-    updateURL();
+    // Update the URL with the previous contents of the search box
+    updateURL(lastSearch);
   });
 });
 
-// Updates the URL based on the contents of the search box and the text in the dropdown box
-function updateURL() {
+// Updates the URL based on the search contents given and the text in the dropdown box
+function updateURL(search) {
   let url = new URL(window.location.href);
-  url.searchParams.set("search", searchBox.innerText);
+  url.searchParams.set("search", search);
   url.searchParams.set("sort", dropdown.innerText);
   window.location.href = url;
 }
