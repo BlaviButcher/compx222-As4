@@ -87,7 +87,6 @@ function array_sort_by_column($songList, $column) {
 
 }
 
-
 ?>
 
 <!DOCTYPE html>

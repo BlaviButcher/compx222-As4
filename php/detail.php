@@ -32,6 +32,20 @@ foreach ($songList as $song) {
     }
 }
 
+function array_sort_by_column(&$array, $column) {
+    $reference_array = array();
+
+    // extract the column we want to sort by and put into $reference_array
+    foreach ($array as $key => $row) {
+        $reference_array[$key] = $row[$column];
+    }
+
+    // sort using extracted column as reference. $reference_array is sorted
+    // then the corresponding indexes of the other array - $array - are sorted
+    // to matched the indexes of the first array $reference_array
+    array_multisort($reference_array, $array);
+}
+
 ?>
 
 <!DOCTYPE html>
