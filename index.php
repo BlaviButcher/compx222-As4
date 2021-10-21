@@ -32,12 +32,11 @@ if (isset($_GET["search"])) {
 // Set the current sort and sort the array
 if (isset($_GET["sort"])) $sort = trim($_GET["sort"]);
 else $sort = "Title";
-array_sort_by_column($songList, $sort);
+$songList = array_sort_by_column($songList, $sort);
 
 /**
- * Takes in an array of songs. Creates a new array and adds any song
- * that has a match in any enumarable column
- * Returns updated array
+ * Takes in an array of songs and a string to search by.
+ * Creates a new array and adds any song that has a match in any enumarable column
  * @param array An array of songs to filter by search
  * @param string The search to filter the array by
  * @return array The filtered song array
@@ -63,9 +62,11 @@ function song_array_search($songList, $search) {
 }
 
 /**
+ * Created a referenceArray with content from songs with only one column - the one given.
+ * It's then sorted, then sorts the big song array using the referenceArray as referenc
  * Takes in an array of songs. Creates a reference array
  * @param array An array of songs to filter by search
- * @param string The the name of the column to sort the song array by
+ * @param string The name of the column to sort the song array by
  * @return array The sorted song array
  */
 function array_sort_by_column($songList, $column) {
@@ -80,6 +81,9 @@ function array_sort_by_column($songList, $column) {
 
     // Sort the song list, using the indexes in the reference array as a reference
     array_multisort($refArray, $songList);
+
+    // Return the sorted song list
+    return $songList;
 
 }
 
