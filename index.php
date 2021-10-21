@@ -114,7 +114,7 @@ function array_sort_by_column(&$array, $column) {
                         else echo "";
                         ?>
             </div>
-            <div id="search-go-button">
+            <div id="search-button">
                 <img id="search-go-img" src="images/magnifying-glass.png" alt="">
             </div>
         </div>

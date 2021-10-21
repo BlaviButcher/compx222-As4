@@ -70,7 +70,7 @@ header {
 }
 
 /* Go button */
-#search-go-button {
+#search-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +85,7 @@ header {
   margin-left: 10px;
 }
 
-/* comment TODO */
+/* Grid of song cards */
 .grid-container {
   display: grid;
   grid-gap: 50px;
