@@ -1,16 +1,16 @@
 let lastSearch = document.getElementById("search-box").innerText;
 
-// On go click, gets content of seach-box and dropdown-order, then attaches
+// On go click, gets content of seach-box and dropdown-sort, then attaches
 // these to the current URL in variables
 document.getElementById("search-go-button").addEventListener("click", () => {
-  // Get the contents of search-box and dropdown-order.
+  // Get the contents of search-box and dropdown-sort.
   let search = document.getElementById("search-box").innerText;
-  let order = document.getElementById("dropdown-order").innerText;
+  let sort = document.getElementById("dropdown-sort").innerText;
 
   // Set the URL to a new URL with the previous variables attached to it
   let url = new URL(window.location.href);
   url.searchParams.set("search", search);
-  url.searchParams.set("order", order);
+  url.searchParams.set("sort", sort);
   window.location.href = url;
 });
 
@@ -52,26 +52,25 @@ document.getElementById("search-box").addEventListener("keypress", (event) => {
 document
   .getElementById("search-box")
   .addEventListener("input", function (event) {
-    event.target.style.caretColor =
-      event.target.textContent == "" ? "transparent" : "black";
+    event.target.style.caretColor = "transparent";
   });
 
 // Click event for each dropdown option
 document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
   // Updates dropdown face appeareance and creates a new get request
-  // using the previous search and the newly selected order category
+  // using the previous search and the newly selected sort category
   dropdownItem.addEventListener("click", (event) => {
-    let dropdownOrderMain = document.getElementById("dropdown-order");
+    let dropdownSortMain = document.getElementById("dropdown-sort");
     // Needs concat empty for style purposes - thanks bootstrap
-    dropdownOrderMain.innerText = event.target.innerText + " ";
+    dropdownSortMain.innerText = event.target.innerText + " ";
 
-    // Get the contents of dropdown-order
-    let order = document.getElementById("dropdown-order").innerText;
+    // Get the contents of dropdown-sort
+    let sort = document.getElementById("dropdown-sort").innerText;
 
     let url = new URL(window.location.href);
 
     url.searchParams.set("search", lastSearch);
-    url.searchParams.set("order", order);
+    url.searchParams.set("sort", sort);
     window.location.href = url;
   });
 });

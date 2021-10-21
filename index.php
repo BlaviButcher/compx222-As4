@@ -23,11 +23,11 @@ if (isset($_GET["search"])) {
 $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
-// Set order. If it is set, trim and lower, else use default - title
-$searchOrder = "title";
-if (isset($_GET["order"])) $searchOrder = trim(strtolower($_GET["order"]));
+// Set sort. If it is set, trim and lower, else use default - title
+$searchSort = "title";
+if (isset($_GET["sort"])) $searchSort = trim(strtolower($_GET["sort"]));
 
-array_sort_by_column($songs, $searchOrder);
+array_sort_by_column($songs, $searchSort);
 
 /**
  * Takes in a list of songs. Creates a new array and adds any song
@@ -124,17 +124,17 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown-container">
                 <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-order"
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-sort"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php if (isset($_GET["order"])) echo $_GET["order"];
+                        <?php if (isset($_GET["sort"])) echo $_GET["sort"];
                         else echo "Title"; ?>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item">Title</a>
+                        <a class="dropdown-item<?php if ($searchSort == "title") echo " selected-item";?>">Title</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item">Artist</a>
+                        <a class="dropdown-item<?php if ($searchSort == "artist") echo " selected-item";?>">Artist</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item">Album</a>
+                        <a class="dropdown-item<?php if ($searchSort == "album") echo " selected-item";?>">Album</a>
                     </div>
                 </div>
             </div>

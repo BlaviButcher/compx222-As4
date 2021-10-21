@@ -1,8 +1,8 @@
 /* Variables */
 :root {
   --search-box-height: 50px;
-  --body-background-color: #272838;
-  --off-background-color: #ffffff;
+  --background-color: #282838;
+  --outline-color: #ffffff;
   --font: "arima-koshi", sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--body-background-color);
+  background-color: var(--background-color);
   font-family: var(--font);
 }
 
@@ -29,7 +29,7 @@ body {
   width: 45%;
   min-height: 80%;
   height: auto;
-  background-color: var(--off-background-color);
+  background-color: var(--outline-color);
   border-radius: 30px;
   padding: 10px;
   margin: 20px;
@@ -70,7 +70,7 @@ img {
   width: 50%;
   min-width: 300px;
   height: 200px;
-  color: var(--off-background-color);
+  color: var(--outline-color);
 }
 
 /* Musical notes for the background */
