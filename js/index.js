@@ -1,7 +1,7 @@
 // Declare variables
 let searchBox = document.getElementById("search-box"); // The search box
 let searchButton = document.getElementById("search-button"); // The button for the search box
-let dropdownSort = document.getElementById("dropdown-sort"); // The dropdown box that determines what the song cards will be sorted by
+let dropdown = document.getElementById("dropdown"); // The dropdown box that determines what the song cards will be sorted by
 let lastSearch = document.getElementById("search-box").innerText; // The contents of the last search
 
 // Make the search box caret transparent
@@ -25,7 +25,7 @@ searchButton.addEventListener("click", () => {
 function search() {
   // Get the contents of search-box and dropdown-sort.
   let search = searchBox.innerText;
-  let sort = dropdownSort.innerText;
+  let sort = dropdown.innerText;
 
   // Set the URL to a new URL with the previous variables attached to it
   let url = new URL(window.location.href);
@@ -61,17 +61,16 @@ for (let item of document.getElementsByClassName("grid-item")) {
   });
 }
 
-// Click event for each dropdown option
+// Click event for each option in the dropdown
 document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
   // Updates dropdown face appeareance and creates a new get request
   // using the previous search and the newly selected sort category
   dropdownItem.addEventListener("click", (event) => {
-    let dropdownSortMain = document.getElementById("dropdown-sort");
-    // Needs concat empty for style purposes - thanks bootstrap
-    dropdownSortMain.innerText = event.target.innerText + " ";
+    // Get the contents of the selected dropdown item
+    let sort = event.target.innerText;
 
-    // Get the contents of dropdown-sort
-    let sort = dropdownSort.innerText;
+    // Needs concat empty for style purposes - thanks bootstrap
+    dropdown.innerText = event.target.innerText + " ";
 
     // Add the selected sort as a variable for the URL
     let url = new URL(window.location.href);

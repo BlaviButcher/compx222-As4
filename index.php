@@ -24,10 +24,10 @@ $songs = xmlSongsToAsscArray($song_list);
 $songs = song_array_search($songs);
 
 // Set sort. If it is set, trim and lower, else use default - title
-$searchSort = "title";
-if (isset($_GET["sort"])) $searchSort = trim(strtolower($_GET["sort"]));
+$sort = "title";
+if (isset($_GET["sort"])) $sort = trim(strtolower($_GET["sort"]));
 
-array_sort_by_column($songs, $searchSort);
+array_sort_by_column($songs, $sort);
 
 /**
  * Takes in a list of songs. Creates a new array and adds any song
@@ -108,10 +108,15 @@ function array_sort_by_column(&$array, $column) {
 
         <!-- Center of the header. Holds everything related to search -->
         <div id="search-container">
-            <div id="search-box" contenteditable>
+            <div id="search-box" contenteditable data-placeholder="(untitled)">
                 <!-- If something was searched, update the search box to match -->
-                <?php if ($isSearching) echo trim($_GET["search"]);
-                        else echo "";
+                <?php
+                
+                
+                //if ($isSearching) echo trim($_GET["search"]);
+                        //else echo "";
+
+                        echo $isSearching ? trim($_GET["search"]) : "";
                         ?>
             </div>
             <div id="search-button">
@@ -122,20 +127,18 @@ function array_sort_by_column(&$array, $column) {
         <!-- Right margin of the header -->
         <div id="header-margin-right">
             <!-- Dropdown -->
-            <div class="dropdown-container">
-                <div class="dropdown open">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-sort"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?php if (isset($_GET["sort"])) echo $_GET["sort"];
+            <div class="dropdown open">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <?php if (isset($_GET["sort"])) echo $_GET["sort"];
                         else echo "Title"; ?>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item<?php if ($searchSort == "title") echo " selected-item";?>">Title</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item<?php if ($searchSort == "artist") echo " selected-item";?>">Artist</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item<?php if ($searchSort == "album") echo " selected-item";?>">Album</a>
-                    </div>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item<?php if ($sort == "title") echo " selected-item";?>">Title</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item<?php if ($sort == "artist") echo " selected-item";?>">Artist</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item<?php if ($sort == "album") echo " selected-item";?>">Album</a>
                 </div>
             </div>
         </div>
