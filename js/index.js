@@ -1,48 +1,51 @@
 // Declare variables
 let searchBox = document.getElementById("search-box"); // The search box
 let searchButton = document.getElementById("search-button"); // The button for the search box
-let dropdown = document.getElementById("dropdown"); // The dropdown box that determines what the song cards will be sorted by
-let lastSearch = document.getElementById("search-box").innerText; // The contents of the last search
+let dropdown = document.getElementById("dropdown"); // The dropdown box that determines how song cards will be sorted
+let dropdownItems = document.querySelectorAll("div.dropdown-menu a"); // An array of items in the dropdown box
+let songCards = document.getElementsByClassName("grid-item"); // An array of song cards
 
-// Make the search box caret transparent
-searchBox.style.caretColor = "transparent";
-
-// On enter key-press in the search box, do a search
+// On enter key-press in the search box, update the URL
 searchBox.addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     // Prevent a new line from being written in the search box
     event.preventDefault();
-    search();
+    updateURL();
   }
 });
 
-// On click of the search button, do a search
+// On click of the search button, update the URL
 searchButton.addEventListener("click", () => {
-  search();
+  updateURL();
 });
 
-// Gets content of seach-box and dropdown-sort, then attaches these to the current URL in variables
-function search() {
-  // Get the contents of search-box and dropdown-sort.
-  let search = searchBox.innerText;
-  let sort = dropdown.innerText;
+// On click of a dropdown item, update the dropdown box text and update the URL
+dropdownItems.forEach((dropdownItem) => {
+  dropdownItem.addEventListener("click", (event) => {
+    // Set the text of the dropdown to the selected sort
+    dropdown.innerText = event.target.innerText;
 
-  // Set the URL to a new URL with the previous variables attached to it
+    // Update the URL
+    updateURL();
+  });
+});
+
+// Updates the URL based on the contents of the search box and the text in the dropdown box
+function updateURL() {
   let url = new URL(window.location.href);
-  url.searchParams.set("search", search);
-  url.searchParams.set("sort", sort);
+  url.searchParams.set("search", searchBox.innerText);
+  url.searchParams.set("sort", dropdown.innerText);
   window.location.href = url;
 }
 
-// Adds click events for grid items (song cards)
-for (let item of document.getElementsByClassName("grid-item")) {
-  // Get artist and song name of selected card and create a get request using these
-  // variables going to php/detail.php
-  item.addEventListener("click", () => {
-    let artistName = item.children[1].children[1].children[1].textContent;
-    let songName = item.children[1].children[0].children[1].textContent;
+// Adds click events for each grid item (song card)
+for (let songCard of songCards) {
+  songCard.addEventListener("click", () => {
+    // Get the artist and title of the selected card
+    let artist = songCard.children[1].children[1].children[1].textContent;
+    let title = songCard.children[1].children[0].children[1].textContent;
 
-    // Generate a new URL from the current by removing its parameters using tokenisation
+    // Generate a URL to "detail.php" by tokenising the current URL
     let urlArray = location.href.split("/");
     let urlString = "";
     for (let i = 0; i < urlArray.length - 1; i++) {
@@ -52,30 +55,9 @@ for (let item of document.getElementsByClassName("grid-item")) {
     urlString += "php/detail.php";
     let url = new URL(urlString);
 
-    // Append the artist and song name to the variables of the new URL
-    url.searchParams.set("title", songName);
-    url.searchParams.set("artist", artistName);
-
-    // Change the current URL to the new URL
+    // Add the artist and title to the URL
+    url.searchParams.set("title", title);
+    url.searchParams.set("artist", artist);
     window.location.href = url;
   });
 }
-
-// Click event for each option in the dropdown
-document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
-  // Updates dropdown face appeareance and creates a new get request
-  // using the previous search and the newly selected sort category
-  dropdownItem.addEventListener("click", (event) => {
-    // Get the contents of the selected dropdown item
-    let sort = event.target.innerText;
-
-    // Needs concat empty for style purposes - thanks bootstrap
-    dropdown.innerText = event.target.innerText + " ";
-
-    // Add the selected sort as a variable for the URL
-    let url = new URL(window.location.href);
-    url.searchParams.set("search", lastSearch);
-    url.searchParams.set("sort", sort);
-    window.location.href = url;
-  });
-});

@@ -3,12 +3,12 @@
 /**
  * Converts the contents of an XML file to an array of associative arrays
  */
-function xmlSongsToAsscArray($song_list) {
+function xmlSongsToAsscArray($songList) {
 
-    $songs = array();
+    $newSongList = array();
 
-    foreach ($song_list->children() as $song) {
-        $songs[] = array(
+    foreach ($songList->children() as $song) {
+        $newSongList[] = array(
             'title' => (string)$song->title,
             'artist' => (string)$song->artist,
             'album' => (string)$song->album,
@@ -18,5 +18,7 @@ function xmlSongsToAsscArray($song_list) {
         );
     }
 
-    return $songs;
+    return $newSongList;
 }
+
+?>

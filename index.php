@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 // Setup error reporting
@@ -10,83 +12,56 @@ include("php/helper.php");
 
 // Load song list if exists, else error
 if (file_exists('xml/song_list.xml')) {
-    $song_list = simplexml_load_file('xml/song_list.xml');
+    $songList = simplexml_load_file('xml/song_list.xml');
 } else exit('Failed to open xml/song_list.xml');
 
-// Check and record if the page is currently searching by observing the get request.
-$isSearching = false;
+// Convert the song list to an array of associative arrays
+$songList = xmlSongsToAsscArray($songList);
+
+// Get the current search. If the current search is not empty, then filter the song list by the current search
+$search = "";
 if (isset($_GET["search"])) {
-    $isSearching = !($_GET["search"] == "\n" || $_GET["search"] == "");
-}
+    if (!($_GET["search"] == "")) {
+    
+        // Get the current search
+        $search = trim($_GET["search"]);
+        
+        // Declare an array of fields to search by
+        $fieldList = array("title", "artist", "album", "year", "genre");
+        
+        // Create a new song list
+        $newSongList = array();
 
-// Get the songs from $song_list and filter them based on the current search
-$songs = xmlSongsToAsscArray($song_list);
-$songs = song_array_search($songs);
-
-// Set sort. If it is set, trim and lower, else use default - title
-$sort = "title";
-if (isset($_GET["sort"])) $sort = trim(strtolower($_GET["sort"]));
-
-array_sort_by_column($songs, $sort);
-
-/**
- * Takes in a list of songs. Creates a new array and adds any song
- * that has a match in any enumarable column
- *   
- * @param array $array multidemensional associative array containing songs
- * @return array
- */
-function song_array_search($songList) {
-
-    // New array to be pushed upon and returned
-    $newSongList = array();
-    // Enumarable columns to search
-    $columnSearch = array("title", "artist", "album");
-
-    // If the user searched for something
-    global $isSearching;
-    if ($isSearching) {
-        $content = trim($_GET["search"]);
-        // Get each song
+        // For each song in the song list, if a field matches the search result, then push the song to the new song list
         foreach ($songList as $song) {
-            // Search each column for a match
-            foreach ($columnSearch as $column) {
-                if (strpos(strtolower($song[$column]), strtolower($content)) !== false) {
-                    // Push if match
+            foreach ($fieldList as $field) {
+                if (strpos(strtolower($song[$field]), strtolower($search)) !== false) {
                     array_push($newSongList, $song);
                     break;
                 }
             }
         }
-        return $newSongList;
+        $songList = $newSongList;
     }
-    // If nothing was searched, then return the song list, untouched
-    return $songList;
 }
 
-/**
- * Fills a referenceArray with content from songs with only one column - the one given.
- * It's then sorted, then sorts the big song array using the referenceArray as reference
- * 
- * @param array array filled with songs
- * @param string column to sort by
- */
-function array_sort_by_column(&$array, $column) {
-    $reference_array = array();
+// Set the current sort
+if (isset($_GET["sort"])) $sort = trim($_GET["sort"]);
+else $sort = "Title";
 
-    // extract the column we want to sort by and put into $reference_array
-    foreach ($array as $key => $row) {
-        $reference_array[$key] = $row[$column];
-    }
+// Create a reference array for sorting the grid
+$refArray = array();
 
-    // sort using extracted column as reference. $reference_array is sorted
-    // then the corresponding indexes of the other array - $array - are sorted
-    // to matched the indexes of the first array $reference_array
-    array_multisort($reference_array, $array);
+// For each song in the song list, extract the field we want to sort by and put it into the reference array
+foreach ($songList as $key => $row) {
+    $refArray[$key] = $row[strtolower($sort)];
 }
+
+// Sort the song list, using the indexes in the reference array as a reference
+array_multisort($refArray, $songList);
+
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -102,7 +77,6 @@ function array_sort_by_column(&$array, $column) {
 
 <body>
     <header>
-
         <!-- Left margin of the header (buffer for symmetric spacing) -->
         <div id="header-margin-left"></div>
 
@@ -110,14 +84,7 @@ function array_sort_by_column(&$array, $column) {
         <div id="search-container">
             <div id="search-box" contenteditable data-placeholder="(untitled)">
                 <!-- If something was searched, update the search box to match -->
-                <?php
-                
-                
-                //if ($isSearching) echo trim($_GET["search"]);
-                        //else echo "";
-
-                        echo $isSearching ? trim($_GET["search"]) : "";
-                        ?>
+                <?php echo $search; ?>
             </div>
             <div id="search-button">
                 <img id="search-go-img" src="images/magnifying-glass.png" alt="">
@@ -129,16 +96,13 @@ function array_sort_by_column(&$array, $column) {
             <!-- Dropdown -->
             <div class="dropdown open">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <?php if (isset($_GET["sort"])) echo $_GET["sort"];
-                        else echo "Title"; ?>
-                </button>
+                    aria-haspopup="true" aria-expanded="false"><?php echo $sort; ?></button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item<?php if ($sort == "title") echo " selected-item";?>">Title</a>
+                    <a class="dropdown-item<?php if ($sort == "Title") echo " selected-item";?>">Title</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item<?php if ($sort == "artist") echo " selected-item";?>">Artist</a>
+                    <a class="dropdown-item<?php if ($sort == "Artist") echo " selected-item";?>">Artist</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item<?php if ($sort == "album") echo " selected-item";?>">Album</a>
+                    <a class="dropdown-item<?php if ($sort == "Album") echo " selected-item";?>">Album</a>
                 </div>
             </div>
         </div>
@@ -146,32 +110,38 @@ function array_sort_by_column(&$array, $column) {
 
     <!-- Grid of song cards -->
     <div class="grid-container">
-        <?php
-        // Draw songs to page in each individual card
-        foreach ($songs as $song) {
-            // Storing in varaible to prevent templating issues
-            $title = $song['title'];
-            $artist = $song['artist'];
-            $album = $song['album'];
-            $art = $song['art'];
 
-            // Circumvents error in templating
-            echo "<div class='grid-item'>
-            <div class='img-wrap'>
-                <img src=$art alt=''>
-            </div>
-            <div class='info-wrap'>
-                <div class='field-1'><strong>Title: </strong><span>$title</span></div>
-                <div class='field-2'><strong>Artist: </strong><span>$artist</span></div>
-                <div class='field-3'><strong>Album: </strong><span>$album</span></div>
-            </div>
-        </div>";
-        }
-        ?>
+        <?php
+
+            // Draw each song to the page in the form of a card
+            foreach ($songList as $song) {
+
+                // Get the relevant fields from the current song
+                $title = $song['title'];
+                $artist = $song['artist'];
+                $album = $song['album'];
+                $art = $song['art'];
+
+                // Add the song card to the HTML. (Doing it this way to circumvent errors in terms of templating)
+                echo
+                "<div class='grid-item'>
+                    <div class='img-wrap'>
+                        <img src=$art alt=''>
+                    </div>
+                    <div class='info-wrap'>
+                        <div class='field-1'><strong>Title: </strong><span>$title</span></div>
+                        <div class='field-2'><strong>Artist: </strong><span>$artist</span></div>
+                        <div class='field-3'><strong>Album: </strong><span>$album</span></div>
+                    </div>
+                </div>";
+            }
+
+            ?>
+
     </div>
 
-    <!-- Down here as that is what bootstrap requests -->
-    <!-- These are only used for the toggle dropdown -->
+    <!-- Gotta put bootstrap down here, because its a prima donna -->
+    <!-- Used for the toggle dropdown -->
     <!-- Popper JS -->
     <script src="js/bootstrap/pooper.min.js"></script>
     <!-- jquery needed for bootstrap -->

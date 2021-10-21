@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 // Setup error reporting
@@ -10,29 +12,30 @@ include("helper.php");
 
 // Load song list if exists, else error
 if (file_exists('../xml/song_list.xml')) {
-    $song_list = simplexml_load_file('../xml/song_list.xml');
+    $songList = simplexml_load_file('../xml/song_list.xml');
 } else exit('Failed to open ../xml/song_list.xml');
 
-// Get the content of the current song from the GET and get that song from $song_list
-$songs = xmlSongsToAsscArray($song_list);
-$song = getSongContent($songs);
+// Convert the song list to an array of associative arrays
+$songList = xmlSongsToAsscArray($songList);
 
-/**
- * Gets the song from the song list, based on its title and artist
- */
-function getSongContent($songs) {
-    $title = $_GET["title"];
-    $artist = $_GET["artist"];
-    foreach ($songs as $song) {
-        if (strpos($song["title"], $title) !== false && strpos($song['artist'], $artist) !== false) {
-            return $song;
-        }
+// Get the title and artist of the song we want to display
+$title = $_GET["title"];
+$artist = $_GET["artist"];
+
+// Find a song in the song list that matches the title and artist exactly, then get the remaining fields
+foreach ($songList as $song) {
+    if ($song["title"] == $title && $song["artist"] == $artist) {
+        // Get the remaining fields
+        $album = $song["album"];
+        $genre = $song["genre"];
+        $year = $song["year"];
+        $art = "../".$song["art"];
+        break;
     }
 }
 
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -43,20 +46,11 @@ function getSongContent($songs) {
     <title>Document</title>
 </head>
 
-<?php
-// Circumvent templating issue
-$title = $song["title"];
-$artist = $song["artist"];
-$album = $song["album"];
-$genre = $song["genre"];
-$year = $song["year"];
-// doing this because php is satan and decides to add " (quotes) on concat
-// ie "../""images/xnay_on_the_hombre""
-$art = str_replace('"', "", ("../" . $song["art"]));
-?>
-
 <body>
+    <!-- Musical notes -->
     <?php include("../html/notes.html") ?>
+
+    <!-- Song card -->
     <div id="card">
         <div class='img-wrap'>
             <img alt='' src=<?php echo $art ?>>
@@ -69,6 +63,8 @@ $art = str_replace('"', "", ("../" . $song["art"]));
             <div class='field-5'><strong>Genre: </strong><span><?php echo $song["genre"] ?></span></div>
         </div>
     </div>
+
+    <!-- Musical notes -->
     <?php include("../html/notes.html") ?>
 </body>
 
