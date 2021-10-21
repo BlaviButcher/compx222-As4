@@ -27,7 +27,7 @@ foreach ($songList as $song) {
         $album = $song["album"];
         $genre = $song["genre"];
         $year = $song["year"];
-        $art = "../".$song["art"];
+        $art = "../" . $song["art"];
         break;
     }
 }
@@ -56,7 +56,7 @@ function array_sort_by_column(&$array, $column) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/detail.css">
-    <title>Document</title>
+    <title><?php echo $title . " - " . $artist ?></title>
 </head>
 
 <body>
