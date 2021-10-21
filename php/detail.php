@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 
 // Setup error reporting
@@ -36,6 +34,7 @@ foreach ($songList as $song) {
 
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
