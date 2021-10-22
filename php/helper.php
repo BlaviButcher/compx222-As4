@@ -55,7 +55,7 @@ function song_array_search($songList, $search) {
 
 /**
  * Created a referenceArray with content from songs with only one column - the one given.
- * It's then sorted, then sorts the big song array using the referenceArray as referenc
+ * It's then sorted, then sorts the big song array using the referenceArray as reference
  * Takes in an array of songs. Creates a reference array
  * @param array An array of songs to filter by search
  * @param string The name of the column to sort the song array by
@@ -63,7 +63,7 @@ function song_array_search($songList, $search) {
  */
 function array_sort_by_column($songList, $column) {
 
-    // Create a reference array for sorting the grid
+    // Create a reference array for sorting 
     $refArray = array();
 
     // For each song in the song list, extract the field we want to sort by and put it into the reference array
@@ -77,5 +77,3 @@ function array_sort_by_column($songList, $column) {
     // Return the sorted song list
     return $songList;
 }
-
-?>

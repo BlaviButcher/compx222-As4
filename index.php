@@ -90,13 +90,13 @@ $songList = array_sort_by_column($songList, $sort);
         // Draw each song to the page in the form of a card
         foreach ($songList as $song) {
 
-            // Get the relevant fields from the current song
+            // Get the relevant fields from the current song (Doing it this way to circumvent errors in terms of templating)
             $title = $song['title'];
             $artist = $song['artist'];
             $album = $song['album'];
             $art = $song['art'];
 
-            // Add the song card to the HTML. (Doing it this way to circumvent errors in terms of templating)
+            // Add the song card to the HTML
             echo
             "<div class='grid-item'>
                     <div class='img-wrap'>
@@ -114,7 +114,7 @@ $songList = array_sort_by_column($songList, $sort);
 
     </div>
 
-    <!-- Gotta put bootstrap down here, because its a prima donna -->
+    <!-- Gotta put bootstrap down here as requested by the docs -->
     <!-- Used for the toggle dropdown -->
     <!-- Popper JS -->
     <script src="js/bootstrap/pooper.min.js"></script>
