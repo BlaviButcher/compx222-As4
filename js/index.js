@@ -1,48 +1,35 @@
-// Declare variables
-let searchBox = document.getElementById("search-box"); // The search box
-let lastSearch = searchBox.innerText; // The last search made
-let searchButton = document.getElementById("search-button"); // The button for the search box
-let dropdown = document.getElementById("dropdown"); // The dropdown box that determines how song cards will be sorted
-let dropdownItems = document.querySelectorAll("div.dropdown-menu a"); // An array of items in the dropdown box
-let songCards = document.getElementsByClassName("grid-item"); // An array of song cards
+// Get the last search made
+let lastSearch = document.getElementById("search-box").innerText;
 
 // On enter key-press in the search box, update the URL
-searchBox.addEventListener("keypress", (event) => {
+document.getElementById("search-box").addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     // Prevent a new line from being written in the search box
     event.preventDefault();
 
     // Update the URL with the current contents of the search box
-    updateURL(searchBox.innerText);
+    updateURL(document.getElementById("search-box").innerText);
   }
 });
 
 // On click of the search button, update the URL with the current contents of the search box
-searchButton.addEventListener("click", () => {
-  updateURL(searchBox.innerText);
+document.getElementById("search-button").addEventListener("click", () => {
+  updateURL(document.getElementById("search-box").innerText);
 });
 
 // On click of a dropdown item, update the dropdown box text and update the URL
-dropdownItems.forEach((dropdownItem) => {
+document.querySelectorAll("div.dropdown-menu a").forEach((dropdownItem) => {
   dropdownItem.addEventListener("click", (event) => {
     // Set the text of the dropdown to the selected sort
-    dropdown.innerText = event.target.innerText;
+    document.getElementById("dropdown").innerText = event.target.innerText;
 
     // Update the URL with the previous contents of the search box
     updateURL(lastSearch);
   });
 });
 
-// Updates the URL based on the search contents given and the text in the dropdown box
-function updateURL(search) {
-  let url = new URL(window.location.href);
-  url.searchParams.set("search", search);
-  url.searchParams.set("sort", dropdown.innerText);
-  window.location.href = url;
-}
-
 // Adds click events for each grid item (song card)
-for (let songCard of songCards) {
+for (let songCard of document.getElementsByClassName("grid-item")) {
   songCard.addEventListener("click", () => {
     // Get the artist and title of the selected card
     let artist = songCard.children[1].children[1].children[1].textContent;
@@ -63,4 +50,15 @@ for (let songCard of songCards) {
     url.searchParams.set("artist", artist);
     window.location.href = url;
   });
+}
+
+/**
+ * Updates the URL based on the search query passed in and the text in the dropdown box
+ * @param {string} search The search query to put into the URL
+ */
+function updateURL(search) {
+  let url = new URL(window.location.href);
+  url.searchParams.set("search", search);
+  url.searchParams.set("sort", document.getElementById("dropdown").innerText);
+  window.location.href = url;
 }
