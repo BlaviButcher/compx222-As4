@@ -2,8 +2,8 @@
 :root {
   --search-box-height: 50px;
   --background-color: #282838;
-  --outline-color: #ffffff;
-  --selected-color: #c0c0e0;
+  --outline-color: #dedbd8;
+  --selected-color: #2274a5;
   --font-color: #000000;
   --font: "arima-koshi", sans-serif;
 }
@@ -130,7 +130,7 @@ header {
 .dropdown button {
   background-color: var(--outline-color);
   height: 50px;
-  width: 150px;
+  width: 160px;
   border-radius: 10px;
   margin-right: 40px;
 }
@@ -145,4 +145,9 @@ header {
 /* The currently selected sort option */
 .selected-item {
   background-color: var(--selected-color) !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  background-color: var(--outline-color) !important;
 }
