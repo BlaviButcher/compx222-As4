@@ -25,6 +25,7 @@ $song = array();
 foreach ($songList as $currentSong) {
     if ($currentSong["title"] == $title && $currentSong["artist"] == $artist) {
         $song = $currentSong;
+
         break;
     }
 }
@@ -39,7 +40,7 @@ foreach ($songList as $currentSong) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/detail.css">
-    <title>Document</title>
+    <title><?php echo $title . " - " . $artist ?></title>
 </head>
 
 <body>
