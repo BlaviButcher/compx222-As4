@@ -2,7 +2,7 @@
 :root {
   --search-box-height: 50px;
   --background-color: #282838;
-  --outline-color: #e0e0e0;
+  --outline-color: #dedbd8;
   --selected-color: #2274a5;
   --font-color: #000000;
   --selected-font-color: #ffffff;
@@ -15,42 +15,48 @@
   src: url(../fonts/arima-koshi/ArimaKoshi-Medium.otf);
 }
 
-/* Body*/
 body {
   display: flex;
+  /* Stack */
   flex-direction: column;
   background-color: var(--background-color) !important;
+  /* Padding all sides */
   padding-bottom: 30px;
   font-family: var(--font);
 }
 
-/* Header*/
 header {
   display: flex;
+  /* Double margin bottom to rest */
   margin: 30px 30px 60px 30px;
   font-family: var(--font);
 }
 
 /* The space to the left of the search area. Used as a buffer */
 #header-margin-left {
+  /* Grow ratio */
   flex: 1;
 }
 
 /* The space to the right of the search area. Contains the sort box */
 #header-margin-right {
   display: flex;
+  /* Grow ratio */
   flex: 1;
+  /* Set to end of container */
   justify-content: flex-end;
 }
 
-/* Search container*/
 #search-container {
   display: flex;
+  /* Grow ratio */
   flex: 2;
   height: 100px;
+  /* Stops bullying */
   min-height: 3rem;
   width: 100%;
   border: 2px solid var(--outline-color);
+  /* Curve corners */
   border-radius: 10px;
   color: var(--outline-color);
   height: var(--search-box-height);
@@ -58,8 +64,10 @@ header {
 
 /* Search box */
 #search-box {
+  /* Grow ration */
   flex: 1;
   display: flex;
+  /* Stack and center all including contents */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -67,6 +75,7 @@ header {
   overflow: hidden;
   caret-color: transparent;
   font-size: 1.4rem;
+  /* Stops bullying */
   min-width: 300px;
   padding-left: 60px;
 }
@@ -74,7 +83,9 @@ header {
 /* Go button */
 #search-button {
   display: flex;
+  /* Stack */
   flex-direction: column;
+
   justify-content: center;
   width: 60px;
   border-left: 2px solid var(--outline-color);
@@ -132,7 +143,7 @@ header {
 .dropdown button {
   background-color: var(--outline-color);
   height: 50px;
-  width: 150px;
+  width: 160px;
   border-radius: 10px;
   margin-right: 40px;
 }
@@ -157,4 +168,9 @@ header {
 /* The dividers separating the dropdown items */
 .dropdown-divider {
   margin: 0px !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  background-color: var(--outline-color) !important;
 }
