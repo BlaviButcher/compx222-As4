@@ -25,7 +25,6 @@ $song = array();
 foreach ($songList as $currentSong) {
     if ($currentSong["title"] == $title && $currentSong["artist"] == $artist) {
         $song = $currentSong;
-
         break;
     }
 }
