@@ -20,6 +20,7 @@ function xmlSongsToAsscArray($songList) {
         );
     }
 
+    // Return the converted song list
     return $newSongList;
 }
 
@@ -47,6 +48,8 @@ function song_array_search($songList, $search) {
             }
         }
     }
+
+    // Return the filtered song list
     return $newSongList;
 }
 
