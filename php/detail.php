@@ -20,30 +20,14 @@ $songList = xmlSongsToAsscArray($songList);
 $title = $_GET["title"];
 $artist = $_GET["artist"];
 
-// Find a song in the song list that matches the title and artist exactly, then get the remaining fields
-foreach ($songList as $song) {
-    if ($song["title"] == $title && $song["artist"] == $artist) {
-        // Get the remaining fields
-        $album = $song["album"];
-        $genre = $song["genre"];
-        $year = $song["year"];
-        $art = "../" . $song["art"];
+// Get a song from the song list that matches the title and artist exactly
+$song = array();
+foreach ($songList as $currentSong) {
+    if ($currentSong["title"] == $title && $currentSong["artist"] == $artist) {
+        $song = $currentSong;
+
         break;
     }
-}
-
-function array_sort_by_column(&$array, $column) {
-    $reference_array = array();
-
-    // extract the column we want to sort by and put into $reference_array
-    foreach ($array as $key => $row) {
-        $reference_array[$key] = $row[$column];
-    }
-
-    // sort using extracted column as reference. $reference_array is sorted
-    // then the corresponding indexes of the other array - $array - are sorted
-    // to matched the indexes of the first array $reference_array
-    array_multisort($reference_array, $array);
 }
 
 ?>
@@ -66,7 +50,7 @@ function array_sort_by_column(&$array, $column) {
     <!-- Song card -->
     <div id="card">
         <div class='img-wrap'>
-            <img alt='' src=<?php echo $art ?>>
+            <img alt='' src=<?php echo "../".$song["art"] ?>>
         </div>
         <div class='info-wrap'>
             <div class='field-1'><strong>Title: </strong><span><?php echo $song["title"] ?></span></div>
