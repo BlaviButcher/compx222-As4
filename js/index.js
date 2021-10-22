@@ -1,6 +1,19 @@
 // Get the last search made
 let lastSearch = document.getElementById("search-box").innerText;
 
+// change color of searchbox on focus
+document.getElementById("search-box").addEventListener("focus", (event) => {
+    event.target.parentNode.classList.add("search-focused");
+    event.target.nextElementSibling.classList.add("go-button-focus");
+});
+
+// change color of searchbox back to outline color on focus out
+document.getElementById("search-box").addEventListener("focusout", (event) => {
+  event.target.parentNode.classList.remove("search-focused");
+  event.target.nextElementSibling.classList.remove("go-button-focus");
+});
+
+
 // On enter key-press in the search box, update the URL
 document.getElementById("search-box").addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
