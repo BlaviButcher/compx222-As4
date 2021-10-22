@@ -20,10 +20,10 @@ $songList = xmlSongsToAsscArray($songList);
 $search = "";
 if (isset($_GET["search"])) {
     if (!($_GET["search"] == "")) {
-    
+
         // Get the current search
         $search = trim($_GET["search"]);
-        
+
         // Filter the song list by the current search
         $songList = song_array_search($songList, $search);
     }
@@ -70,14 +70,13 @@ $songList = array_sort_by_column($songList, $sort);
         <div id="header-margin-right">
             <!-- Dropdown -->
             <div class="dropdown open">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><?php echo $sort; ?></button>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $sort; ?></button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item<?php if ($sort == "Title") echo " selected-item";?>">Title</a>
+                    <a class="dropdown-item<?php if ($sort == "Title") echo " selected-item"; ?>">Title</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item<?php if ($sort == "Artist") echo " selected-item";?>">Artist</a>
+                    <a class="dropdown-item<?php if ($sort == "Artist") echo " selected-item"; ?>">Artist</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item<?php if ($sort == "Album") echo " selected-item";?>">Album</a>
+                    <a class="dropdown-item<?php if ($sort == "Album") echo " selected-item"; ?>">Album</a>
                 </div>
             </div>
         </div>
@@ -88,18 +87,18 @@ $songList = array_sort_by_column($songList, $sort);
 
         <?php
 
-            // Draw each song to the page in the form of a card
-            foreach ($songList as $song) {
+        // Draw each song to the page in the form of a card
+        foreach ($songList as $song) {
 
-                // Get the relevant fields from the current song
-                $title = $song['title'];
-                $artist = $song['artist'];
-                $album = $song['album'];
-                $art = $song['art'];
+            // Get the relevant fields from the current song
+            $title = $song['title'];
+            $artist = $song['artist'];
+            $album = $song['album'];
+            $art = $song['art'];
 
-                // Add the song card to the HTML. (Doing it this way to circumvent errors in terms of templating)
-                echo
-                "<div class='grid-item'>
+            // Add the song card to the HTML. (Doing it this way to circumvent errors in terms of templating)
+            echo
+            "<div class='grid-item'>
                     <div class='img-wrap'>
                         <img src=$art alt=''>
                     </div>
@@ -109,9 +108,9 @@ $songList = array_sort_by_column($songList, $sort);
                         <div class='field-3'><strong>Album: </strong><span>$album</span></div>
                     </div>
                 </div>";
-            }
+        }
 
-            ?>
+        ?>
 
     </div>
 

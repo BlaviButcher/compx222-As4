@@ -12,10 +12,10 @@
   src: url(../fonts/arima-koshi/ArimaKoshi-Medium.otf);
 }
 
-/* Body */
 body {
   height: 100vh;
   display: flex;
+  /* Center contents */
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
@@ -25,11 +25,14 @@ body {
 /* Song card */
 #card {
   display: flex;
+  /* Stack */
   flex-direction: column;
   width: 45%;
+  /* Allows a little shrinkage */
   min-height: 80%;
   height: auto;
   background-color: var(--outline-color);
+  /* Round edges */
   border-radius: 30px;
   padding: 10px;
   margin: 20px;
@@ -39,12 +42,15 @@ body {
 img {
   height: 100%;
   width: 100%;
+  /* Round edges */
   border-radius: 20px;
 }
 
 /* Song info wrap */
 .info-wrap {
+  /* Grow ratio */
   flex: 1;
+  /* Stack and center contents */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +63,7 @@ img {
   margin-bottom: 10px;
 }
 
-/* First song info. Used to align text vertically */
+/* First song info. Move the top child down a little to fix weird bug */
 .info-wrap div:first-child {
   margin-top: 10px;
 }
@@ -79,30 +85,35 @@ img {
 .note-3,
 .note-4 {
   position: absolute;
+  /* Animation call */
   animation: notes 2s infinite linear;
   font-size: 35px;
   opacity: 0;
 }
 
 .note-1 {
+  /* Placement inside parent */
   top: 60px;
   left: 0;
   animation-delay: 0.5s;
 }
 
 .note-2 {
+  /* Placement inside parent */
   top: 30px;
   left: 30%;
   animation-delay: 1s;
 }
 
 .note-3 {
+  /* Placement inside parent */
   top: 90px;
   left: 60%;
   animation-delay: 1.5s;
 }
 
 .note-4 {
+  /* Placement inside parent */
   top: 40px;
   left: 90%;
   animation-delay: 2s;
